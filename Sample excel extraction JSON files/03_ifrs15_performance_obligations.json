@@ -1,0 +1,137 @@
+{
+  "_meta": {
+    "sourceDocument": "Engagement Letter No. 01 - R100 Crisis and Emergency Management Platform",
+    "sourceAnalysis": "Project agent 1a - Engagement Letter - Presight and Daypop_IFRS15_Analysis.xlsx",
+    "extractedOn": "2026-08-12",
+    "accountingFramework": "IFRS 15",
+    "payloadVersion": "1.0.0",
+    "purpose": "IFRS 15 performance obligations expressed as project contract lines, plus the 5-step model as auditable extension data. The transactional part is ProjectContractLines / billing rules; the ifrs15 blocks belong in extension fields or a custom table."
+  },
+  "transactionPrice": {
+    "amountExcludingTax": 116051000.0,
+    "currency": "AED",
+    "taxAmount": 5802550.0,
+    "amountIncludingTax": 121853550.0,
+    "usdEquivalent": 31600000.0,
+    "impliedRate": 3.6731,
+    "fixedConsideration": 116051000.0,
+    "variableConsiderationRecognised": 0.0,
+    "variableConsiderationConstrained": true,
+    "constraintBasis": "Liquidated damages under Clauses 2(I) and 2(II) are negative variable consideration. At inception it is highly probable that no significant revenue reversal will occur, so nil is included (IFRS 15.56). Re-assess at each milestone.",
+    "vatTreatment": "Excluded from the transaction price - collected on behalf of the Federal Tax Authority (IFRS 15.47).",
+    "significantFinancingComponent": false,
+    "nonCashConsideration": 0.0
+  },
+  "ProjectContractLines": [
+    {
+      "dataAreaId": "DPTP",
+      "ProjectContractId": "PC-EL01-R100",
+      "ContractLineNumber": 1,
+      "ProjectId": "R100-EL01-01",
+      "Description": "POB-1 Presentation & Internal-integration Solution - development, implementation and 3-year O&M ",
+      "BillingMethod": "FixedPriceMilestone",
+      "LineAmountExcludingTax": 59832268.0,
+      "CurrencyCode": "AED",
+      "SalesTaxGroup": "AE-VAT-STD",
+      "RevenueRecognitionMethod": "CompletedPercentage",
+      "ProgressMeasurement": "OutputMilestoneValue",
+      "StartDate": "2023-04-01",
+      "EndDate": "2026-03-31"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProjectContractId": "PC-EL01-R100",
+      "ContractLineNumber": 2,
+      "ProjectId": "R100-EL01-02",
+      "Description": "POB-2 Backbone Services & Terminals - FMP System Core Perpetual Licence, Smart Connection Core &",
+      "BillingMethod": "FixedPriceMilestone",
+      "LineAmountExcludingTax": 56218732.0,
+      "CurrencyCode": "AED",
+      "SalesTaxGroup": "AE-VAT-STD",
+      "RevenueRecognitionMethod": "CompletedPercentage",
+      "ProgressMeasurement": "OutputMilestoneValue",
+      "StartDate": "2023-04-01",
+      "EndDate": "2026-03-31"
+    }
+  ],
+  "ifrs15PerformanceObligations": [
+    {
+      "pobId": "POB-1",
+      "projectId": "R100-EL01-01",
+      "lineNum": 1,
+      "description": "Presentation & Internal-integration Solution - development, implementation and 3-year O&M of: One-screen Overview, Joint Command Console, R100 One, Hawk Eye/SDK/APIs, Network Management Monitoring Platform, R100 Insights, MCU Gateway.",
+      "allocatedTransactionPrice": 59832268.0,
+      "allocationPercent": 51.57,
+      "sspBasis": "Observable contractual price per Commercial Proposal Appendix B: USD 16,296,867 (3-year total), 51.57% of TCV. Negotiated at arm's length; best available evidence of standalone selling price. Adjusted market assessment approach.",
+      "sspCurrencyAmountUSD": 16296867.0,
+      "distinctAssessment": "Capable of being distinct: yes - the application suite provides standalone value. Distinct in the context of the contract: yes - the P&I stream has its own delivery milestones, pricing and RACI responsibilities. Components within POB-1 are highly interdependent and are therefore bundled into a single POB.",
+      "satisfactionTiming": "OverTime",
+      "ifrs15Reference": "IFRS 15.35(a)",
+      "measureOfProgress": "Output method - milestone / delivery package completion (IFRS 15.39)",
+      "recognitionPattern": "Milestone-based across 6 delivery events (M1-M6). Front-loaded: approximately 85% in Years 1-2 (implementation), 15% in Year 3 (O&M)."
+    },
+    {
+      "pobId": "POB-2",
+      "projectId": "R100-EL01-02",
+      "lineNum": 2,
+      "description": "Backbone Services & Terminals - FMP System Core Perpetual Licence, Smart Connection Core & Dispatching Console Perpetual Licence, Professional Services (consulting, integration, training), Terminals (15 professional smart handsets, 15 body cameras, 15 mobile dome cameras, 15 smart watches, 100 terminal licences), 3-year O&M of Backbone Services.",
+      "allocatedTransactionPrice": 56218732.0,
+      "allocationPercent": 48.43,
+      "sspBasis": "Observable contractual price per Commercial Proposal Appendix B: USD 15,303,132 (3-year total), 48.43% of TCV.",
+      "sspCurrencyAmountUSD": 15303132.0,
+      "distinctAssessment": "The perpetual licences (FMP + Smart Connection) are embedded in a broader professional services scope involving significant customisation and integration; they cannot be used independently and are not separately identifiable in the context of the contract (IFRS 15.27(b)), so they are bundled within POB-2. Hardware terminals are capable of being distinct but are delivered as part of a single integrated solution and are treated as part of the POB-2 bundle.",
+      "satisfactionTiming": "OverTime",
+      "ifrs15Reference": "IFRS 15.35(a)",
+      "measureOfProgress": "Output method - milestone / delivery package completion (IFRS 15.39)",
+      "recognitionPattern": "Front-loaded: approximately 65% in Year 1 (licence delivery plus heavy professional services), 19% in Year 2, 15% in Year 3 (O&M)."
+    }
+  ],
+  "allocationCheck": {
+    "sumOfAllocatedPrices": 116051000.0,
+    "transactionPrice": 116051000.0,
+    "variance": 0.0,
+    "allocationMethod": "Relative standalone selling price (IFRS 15.74), SSP evidenced by negotiated Commercial Proposal prices. No residual approach required.",
+    "discountAllocation": "Proportional to both POBs. Any future variable consideration is allocated proportionally unless it relates specifically to one POB."
+  },
+  "fiveStepModel": [
+    {
+      "step": 1,
+      "title": "Identify the Contract with a Customer",
+      "conclusion": "A valid contract exists under IFRS 15.9 from 19 September 2023 (Engagement Letter signing date). Services retroactively commenced 1 April 2023; revenue recognition from that date should be assessed on actual performance completed.",
+      "criteriaMet": {
+        "approvedAndCommitted": true,
+        "rightsIdentifiable": true,
+        "paymentTermsIdentifiable": true,
+        "commercialSubstance": true,
+        "collectabilityProbable": true
+      },
+      "evidence": "Signed by Peng Xiao (G42 Sky1) and Yinglun Ni / Ian Ni (Daypop). Start 1 Apr 2023, end 31 Mar 2026, fees AED 116,051,000 ex-VAT, scope per Appendix A, milestones per Appendix B, SLA per Appendix C, Performance Bond 5%."
+    },
+    {
+      "step": 2,
+      "title": "Identify the Performance Obligations",
+      "conclusion": "Two performance obligations: POB-1 (AED 59,832,268) and POB-2 (AED 56,218,732). Both satisfied over time. Revenue recognised using the milestone/output method consistent with bi-annual package deliveries (IFRS 15.39)."
+    },
+    {
+      "step": 3,
+      "title": "Determine the Transaction Price",
+      "conclusion": "AED 116,051,000 ex-VAT, entirely fixed consideration. VAT of AED 5,802,550 excluded. No variable consideration at inception. No significant financing component."
+    },
+    {
+      "step": 4,
+      "title": "Allocate the Transaction Price",
+      "conclusion": "POB-1 = AED 59,832,268 (51.57%); POB-2 = AED 56,218,732 (48.43%), by reference to Commercial Proposal Appendix B."
+    },
+    {
+      "step": 5,
+      "title": "Recognise Revenue as Performance Obligations are Satisfied",
+      "conclusion": "Over time using the output method at 7 milestone events (Jun 2023, Nov 2023, May 2024, Nov 2024, May 2025, Nov 2025, May 2026). Percentage complete per POB is the proportion of accepted milestone value to total POB value."
+    }
+  ],
+  "significantJudgements": [
+    "Bundling the perpetual licences with professional services inside POB-2 - the licences are not separately distinct given the customisation and integration required.",
+    "Use of the milestone output method rather than a cost-to-cost input method. Reassess if actual delivery diverges materially from the milestone schedule.",
+    "Constraining liquidated damages to nil at inception; monitor as delivery progresses.",
+    "Retroactive commencement - services began 1 April 2023 but the Engagement Letter was signed 19 September 2023; revenue for that window may require a catch-up adjustment at signing."
+  ]
+}

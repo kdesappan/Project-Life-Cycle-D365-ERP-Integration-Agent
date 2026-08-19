@@ -1,0 +1,431 @@
+{
+  "_meta": {
+    "sourceDocument": "Engagement Letter No. 01 - R100 Crisis and Emergency Management Platform",
+    "sourceAnalysis": "Project agent 1a - Engagement Letter - Presight and Daypop_IFRS15_Analysis.xlsx",
+    "extractedOn": "2026-08-12",
+    "accountingFramework": "IFRS 15",
+    "payloadVersion": "1.0.0",
+    "purpose": "Milestone on-account invoicing. Create one project invoice proposal per milestone on acceptance; VAT is added on top and is not part of the IFRS 15 transaction price."
+  },
+  "ProjectInvoiceProposalHeaders": [
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-001",
+      "ProjectContractId": "PC-EL01-R100",
+      "ProjectId": "R100-EL01",
+      "InvoiceAccount": "C-G42SKY1-001",
+      "InvoiceDate": "2023-06-19",
+      "CurrencyCode": "AED",
+      "PaymentTerms": "N060",
+      "CustomerReference": "INV-001",
+      "Description": "Contract Signoff - Perpetual Licence Delivery (60%)",
+      "DueDate": "2023-08-18",
+      "PostingStatus": "Posted"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-002",
+      "ProjectContractId": "PC-EL01-R100",
+      "ProjectId": "R100-EL01",
+      "InvoiceAccount": "C-G42SKY1-001",
+      "InvoiceDate": "2023-11-30",
+      "CurrencyCode": "AED",
+      "PaymentTerms": "N060",
+      "CustomerReference": "INV-002",
+      "Description": "Package 1 Delivery",
+      "DueDate": "2024-01-29",
+      "PostingStatus": "Posted"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-003",
+      "ProjectContractId": "PC-EL01-R100",
+      "ProjectId": "R100-EL01",
+      "InvoiceAccount": "C-G42SKY1-001",
+      "InvoiceDate": "2024-05-31",
+      "CurrencyCode": "AED",
+      "PaymentTerms": "N060",
+      "CustomerReference": "INV-003",
+      "Description": "Package 2 Delivery",
+      "DueDate": "2024-07-30",
+      "PostingStatus": "Posted"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-004",
+      "ProjectContractId": "PC-EL01-R100",
+      "ProjectId": "R100-EL01",
+      "InvoiceAccount": "C-G42SKY1-001",
+      "InvoiceDate": "2024-11-30",
+      "CurrencyCode": "AED",
+      "PaymentTerms": "N060",
+      "CustomerReference": "INV-004",
+      "Description": "Package 3 Delivery",
+      "DueDate": "2025-01-29",
+      "PostingStatus": "Posted"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-005",
+      "ProjectContractId": "PC-EL01-R100",
+      "ProjectId": "R100-EL01",
+      "InvoiceAccount": "C-G42SKY1-001",
+      "InvoiceDate": "2025-05-31",
+      "CurrencyCode": "AED",
+      "PaymentTerms": "N060",
+      "CustomerReference": "INV-005",
+      "Description": "Package 4 Delivery",
+      "DueDate": "2025-07-30",
+      "PostingStatus": "NotCreated"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-006",
+      "ProjectContractId": "PC-EL01-R100",
+      "ProjectId": "R100-EL01",
+      "InvoiceAccount": "C-G42SKY1-001",
+      "InvoiceDate": "2025-11-30",
+      "CurrencyCode": "AED",
+      "PaymentTerms": "N060",
+      "CustomerReference": "INV-006",
+      "Description": "Package 5 Delivery",
+      "DueDate": "2026-01-29",
+      "PostingStatus": "NotCreated"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-007",
+      "ProjectContractId": "PC-EL01-R100",
+      "ProjectId": "R100-EL01",
+      "InvoiceAccount": "C-G42SKY1-001",
+      "InvoiceDate": "2026-05-31",
+      "CurrencyCode": "AED",
+      "PaymentTerms": "N060",
+      "CustomerReference": "INV-007",
+      "Description": "Package 6 Delivery - Final",
+      "DueDate": "2026-07-30",
+      "PostingStatus": "NotCreated"
+    }
+  ],
+  "ProjectInvoiceProposalOnAccountLines": [
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-001",
+      "LineNumber": 1,
+      "ProjectId": "R100-EL01-02",
+      "ContractLineNumber": 2,
+      "MilestoneId": "M0",
+      "Description": "POB-2 Backbone Services & Terminals - M0",
+      "AmountExcludingTax": 14278385.0,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-002",
+      "LineNumber": 1,
+      "ProjectId": "R100-EL01-01",
+      "ContractLineNumber": 1,
+      "MilestoneId": "M1",
+      "Description": "POB-1 Presentation & Internal-integration - M1",
+      "AmountExcludingTax": 21013259.85,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-002",
+      "LineNumber": 2,
+      "ProjectId": "R100-EL01-02",
+      "ContractLineNumber": 2,
+      "MilestoneId": "M1",
+      "Description": "POB-2 Backbone Services & Terminals - M1",
+      "AmountExcludingTax": 14729567.15,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-003",
+      "LineNumber": 1,
+      "ProjectId": "R100-EL01-01",
+      "ContractLineNumber": 1,
+      "MilestoneId": "M2",
+      "Description": "POB-1 Presentation & Internal-integration - M2",
+      "AmountExcludingTax": 15422625.7,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-003",
+      "LineNumber": 2,
+      "ProjectId": "R100-EL01-02",
+      "ContractLineNumber": 2,
+      "MilestoneId": "M2",
+      "Description": "POB-2 Backbone Services & Terminals - M2",
+      "AmountExcludingTax": 10810726.3,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-004",
+      "LineNumber": 1,
+      "ProjectId": "R100-EL01-01",
+      "ContractLineNumber": 1,
+      "MilestoneId": "M3",
+      "Description": "POB-1 Presentation & Internal-integration - M3",
+      "AmountExcludingTax": 7244669.6,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-004",
+      "LineNumber": 2,
+      "ProjectId": "R100-EL01-02",
+      "ContractLineNumber": 2,
+      "MilestoneId": "M3",
+      "Description": "POB-2 Backbone Services & Terminals - M3",
+      "AmountExcludingTax": 5078262.4,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-005",
+      "LineNumber": 1,
+      "ProjectId": "R100-EL01-01",
+      "ContractLineNumber": 1,
+      "MilestoneId": "M4",
+      "Description": "POB-1 Presentation & Internal-integration - M4",
+      "AmountExcludingTax": 7244669.6,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-005",
+      "LineNumber": 2,
+      "ProjectId": "R100-EL01-02",
+      "ContractLineNumber": 2,
+      "MilestoneId": "M4",
+      "Description": "POB-2 Backbone Services & Terminals - M4",
+      "AmountExcludingTax": 5078262.4,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-006",
+      "LineNumber": 1,
+      "ProjectId": "R100-EL01-01",
+      "ContractLineNumber": 1,
+      "MilestoneId": "M5",
+      "Description": "POB-1 Presentation & Internal-integration - M5",
+      "AmountExcludingTax": 4453939.63,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-006",
+      "LineNumber": 2,
+      "ProjectId": "R100-EL01-02",
+      "ContractLineNumber": 2,
+      "MilestoneId": "M5",
+      "Description": "POB-2 Backbone Services & Terminals - M5",
+      "AmountExcludingTax": 3122057.37,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-007",
+      "LineNumber": 1,
+      "ProjectId": "R100-EL01-01",
+      "ContractLineNumber": 1,
+      "MilestoneId": "M6",
+      "Description": "POB-1 Presentation & Internal-integration - M6",
+      "AmountExcludingTax": 4453103.62,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProposalId": "PIP-INV-007",
+      "LineNumber": 2,
+      "ProjectId": "R100-EL01-02",
+      "ContractLineNumber": 2,
+      "MilestoneId": "M6",
+      "Description": "POB-2 Backbone Services & Terminals - M6",
+      "AmountExcludingTax": 3121471.38,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "CurrencyCode": "AED"
+    }
+  ],
+  "invoiceSchedule": [
+    {
+      "invoiceNumber": "INV-001",
+      "proposalId": "PIP-INV-001",
+      "invoiceDate": "2023-06-19",
+      "milestoneId": "M0",
+      "trigger": "Contract Signoff - Perpetual Licence Delivery (60%)",
+      "amountExcludingTax": 14278385.0,
+      "taxAmount": 713919.25,
+      "amountIncludingTax": 14992304.25,
+      "currency": "AED",
+      "paymentTerms": "Net 60 days",
+      "expectedCashInDate": "2023-08-18",
+      "amountByPerformanceObligation": {
+        "POB-1": 0.0,
+        "POB-2": 14278385.0
+      },
+      "status": "Paid",
+      "cashFlowPriority": "High",
+      "percentOfTransactionPrice": 12.3
+    },
+    {
+      "invoiceNumber": "INV-002",
+      "proposalId": "PIP-INV-002",
+      "invoiceDate": "2023-11-30",
+      "milestoneId": "M1",
+      "trigger": "Package 1 Delivery",
+      "amountExcludingTax": 35742827.0,
+      "taxAmount": 1787141.35,
+      "amountIncludingTax": 37529968.35,
+      "currency": "AED",
+      "paymentTerms": "Net 60 days",
+      "expectedCashInDate": "2024-01-29",
+      "amountByPerformanceObligation": {
+        "POB-1": 21013259.85,
+        "POB-2": 14729567.15
+      },
+      "status": "Paid",
+      "cashFlowPriority": "High",
+      "percentOfTransactionPrice": 30.8
+    },
+    {
+      "invoiceNumber": "INV-003",
+      "proposalId": "PIP-INV-003",
+      "invoiceDate": "2024-05-31",
+      "milestoneId": "M2",
+      "trigger": "Package 2 Delivery",
+      "amountExcludingTax": 26233352.0,
+      "taxAmount": 1311667.6,
+      "amountIncludingTax": 27545019.6,
+      "currency": "AED",
+      "paymentTerms": "Net 60 days",
+      "expectedCashInDate": "2024-07-30",
+      "amountByPerformanceObligation": {
+        "POB-1": 15422625.7,
+        "POB-2": 10810726.3
+      },
+      "status": "Paid",
+      "cashFlowPriority": "High",
+      "percentOfTransactionPrice": 22.61
+    },
+    {
+      "invoiceNumber": "INV-004",
+      "proposalId": "PIP-INV-004",
+      "invoiceDate": "2024-11-30",
+      "milestoneId": "M3",
+      "trigger": "Package 3 Delivery",
+      "amountExcludingTax": 12322932.0,
+      "taxAmount": 616146.6,
+      "amountIncludingTax": 12939078.6,
+      "currency": "AED",
+      "paymentTerms": "Net 60 days",
+      "expectedCashInDate": "2025-01-29",
+      "amountByPerformanceObligation": {
+        "POB-1": 7244669.6,
+        "POB-2": 5078262.4
+      },
+      "status": "Paid",
+      "cashFlowPriority": "Medium",
+      "percentOfTransactionPrice": 10.62
+    },
+    {
+      "invoiceNumber": "INV-005",
+      "proposalId": "PIP-INV-005",
+      "invoiceDate": "2025-05-31",
+      "milestoneId": "M4",
+      "trigger": "Package 4 Delivery",
+      "amountExcludingTax": 12322932.0,
+      "taxAmount": 616146.6,
+      "amountIncludingTax": 12939078.6,
+      "currency": "AED",
+      "paymentTerms": "Net 60 days",
+      "expectedCashInDate": "2025-07-30",
+      "amountByPerformanceObligation": {
+        "POB-1": 7244669.6,
+        "POB-2": 5078262.4
+      },
+      "status": "NotYetInvoiced",
+      "cashFlowPriority": "Medium",
+      "percentOfTransactionPrice": 10.62
+    },
+    {
+      "invoiceNumber": "INV-006",
+      "proposalId": "PIP-INV-006",
+      "invoiceDate": "2025-11-30",
+      "milestoneId": "M5",
+      "trigger": "Package 5 Delivery",
+      "amountExcludingTax": 7575997.0,
+      "taxAmount": 378799.85,
+      "amountIncludingTax": 7954796.85,
+      "currency": "AED",
+      "paymentTerms": "Net 60 days",
+      "expectedCashInDate": "2026-01-29",
+      "amountByPerformanceObligation": {
+        "POB-1": 4453939.63,
+        "POB-2": 3122057.37
+      },
+      "status": "NotYetInvoiced",
+      "cashFlowPriority": "Low",
+      "percentOfTransactionPrice": 6.53
+    },
+    {
+      "invoiceNumber": "INV-007",
+      "proposalId": "PIP-INV-007",
+      "invoiceDate": "2026-05-31",
+      "milestoneId": "M6",
+      "trigger": "Package 6 Delivery - Final",
+      "amountExcludingTax": 7574575.0,
+      "taxAmount": 378728.75,
+      "amountIncludingTax": 7953303.75,
+      "currency": "AED",
+      "paymentTerms": "Net 60 days",
+      "expectedCashInDate": "2026-07-30",
+      "amountByPerformanceObligation": {
+        "POB-1": 4453103.62,
+        "POB-2": 3121471.38
+      },
+      "status": "NotYetInvoiced",
+      "cashFlowPriority": "Medium",
+      "percentOfTransactionPrice": 6.53
+    }
+  ],
+  "controlTotals": {
+    "totalExcludingTax": 116051000.0,
+    "totalTax": 5802550.0,
+    "totalIncludingTax": 121853550.0,
+    "transactionPrice": 116051000.0,
+    "invoicedToDateExcludingTax": 88577496.0,
+    "remainingToInvoiceExcludingTax": 27473504.0
+  },
+  "invoiceContentRequirements": [
+    "Amount in AED",
+    "Supplier full business name and address",
+    "Supplier VAT registration number",
+    "Time period and place of supply",
+    "Supplier bank account details",
+    "Send to Payments@G42.ai"
+  ],
+  "_notes": [
+    "Liquidated damages are non-VAT items. The Company issues a separate non-VAT document for any LD deduction; do not net LDs inside a VAT-bearing invoice line.",
+    "Any further advance payment requires a 100% advance bank guarantee.",
+    "INV-001 payment should not be released until receipt of the AED 5,802,550 Performance Bond is confirmed and registered."
+  ]
+}

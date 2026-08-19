@@ -1,0 +1,222 @@
+openapi: 3.0.3
+info:
+  title: D365 F&O Project Lifecycle Load — Engagement Letter No. 01 (R100 Platform)
+  version: 1.0.0
+  description: >
+    OData call sequence to load the Presight / Daypop Engagement Letter No. 01 into the
+    Dynamics 365 Finance & Operations Project management and accounting module, derived
+    from the IFRS 15 analysis workbook. Calls MUST be executed in the order below;
+    each step depends on the keys created by the previous one.
+    All entity set names marked x-verify: true must be validated against the target
+    environment's $metadata document before use — public entity names vary by
+    D365 version and by which features are enabled.
+
+servers:
+  - url: https://{environment}.operations.dynamics.com/data
+    description: D365 F&O OData endpoint
+    variables:
+      environment:
+        default: your-env
+        description: F&O environment host prefix
+
+security:
+  - azureAD: []
+
+components:
+  securitySchemes:
+    azureAD:
+      type: oauth2
+      description: >
+        Azure AD client-credentials flow. Register an app, grant it the
+        Dynamics ERP API permission, then register the client id in
+        F&O under System administration > Setup > Microsoft Entra ID applications
+        against a service account that holds the Project accountant duty.
+      flows:
+        clientCredentials:
+          tokenUrl: https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token
+          scopes:
+            https://{environment}.operations.dynamics.com/.default: Full F&O data access
+  parameters:
+    crossCompany:
+      name: cross-company
+      in: query
+      schema: { type: boolean, default: true }
+      description: Required when the caller's default company differs from dataAreaId.
+  headers:
+    IfNoneMatch:
+      description: Use with GET for existence checks before create.
+      schema: { type: string }
+
+x-execution-order:
+  - step: 0
+    name: Preflight — validate entity names
+    method: GET
+    path: /$metadata
+    payloadFile: null
+    notes: >
+      Extract the EntitySet names and confirm each entity used below exists.
+      Where it does not, search $metadata for the nearest match and update the
+      payload files. Do not guess.
+
+  - step: 1
+    name: Prerequisite master data
+    payloadFile: 00_reference_data.json
+    calls:
+      - { method: GET,  path: "/LegalEntities?$filter=DataAreaId eq 'DPTP'", purpose: existence check }
+      - { method: GET,  path: "/PaymentTerms(dataAreaId='DPTP',Name='N060')", purpose: existence check }
+      - { method: POST, path: /PaymentTerms, body: paymentTerms, condition: 404 on GET }
+      - { method: GET,  path: "/CustomersV3(dataAreaId='DPTP',CustomerAccount='C-G42SKY1-001')" }
+      - { method: POST, path: /CustomersV3, body: customer, condition: 404 on GET }
+      - { method: GET,  path: "/ProjectGroups(dataAreaId='DPTP',ProjectGroupId='FP-IFRS15')", x-verify: true }
+      - { method: POST, path: /ProjectGroups, body: projectGroup, condition: 404 on GET, x-verify: true }
+    idempotencyKey: natural key (dataAreaId + entity key)
+    blocking: true
+
+  - step: 2
+    name: Project contract header
+    payloadFile: 01_project_contract.json
+    calls:
+      - { method: POST, path: /ProjectContractHeaders, body: "ProjectContractHeaders[0]", x-verify: true }
+      - { method: POST, path: /ProjectContractFundingSources, body: "ProjectContractFundingSources[0]", x-verify: true }
+    dependsOn: [1]
+    idempotencyKey: ProjectContractId = PC-EL01-R100
+    notes: >
+      Funding rules are deferred to step 4 because the rule references a ProjectId
+      that does not exist yet.
+
+  - step: 3
+    name: Project master hierarchy
+    payloadFile: 02_project_master.json
+    calls:
+      - { method: POST, path: /ProjectsV2, body: "ProjectsV2[0] (parent R100-EL01)", x-verify: true }
+      - { method: POST, path: /ProjectsV2, body: "ProjectsV2[1] (POB-1 sub-project)" }
+      - { method: POST, path: /ProjectsV2, body: "ProjectsV2[2] (POB-2 sub-project)" }
+    dependsOn: [2]
+    idempotencyKey: ProjectID
+    notes: >
+      POST the parent first — ParentProjectId on the children is a hard FK.
+      If the project number sequence is automatic, omit ProjectID and capture the
+      generated values, then rewrite ProjectId references in files 03 to 06.
+
+  - step: 4
+    name: Contract funding rule
+    payloadFile: 01_project_contract.json
+    calls:
+      - { method: POST, path: /ProjectContractFundingRules, body: "ProjectContractFundingRules[0]", x-verify: true }
+    dependsOn: [3]
+
+  - step: 5
+    name: Contract lines — IFRS 15 performance obligations
+    payloadFile: 03_ifrs15_performance_obligations.json
+    calls:
+      - { method: POST, path: /ProjectContractLines, body: "ProjectContractLines[0] (POB-1)", x-verify: true }
+      - { method: POST, path: /ProjectContractLines, body: "ProjectContractLines[1] (POB-2)", x-verify: true }
+    dependsOn: [4]
+    validation: sum(LineAmountExcludingTax) must equal 116051000.00
+    notes: >
+      In some F&O versions fixed-price funding is modelled on the project itself
+      rather than on a contract line entity. If /ProjectContractLines is absent
+      from $metadata, carry the allocated amount on the sub-project and hold the
+      POB attributes in the extension table from step 9.
+
+  - step: 6
+    name: Milestone billing schedule
+    payloadFile: 04_milestone_billing_schedule.json
+    calls:
+      - { method: POST, path: /ProjectBillingSchedules, body: "ProjectBillingSchedules[0]", x-verify: true }
+      - { method: POST, path: /ProjectBillingScheduleLines, body: "each of ProjectBillingScheduleLines[0..6]", x-verify: true }
+      - { method: POST, path: /ProjectWorkBreakdownStructureTasks, body: "each milestone WBS task from 02_project_master.json", x-verify: true }
+    dependsOn: [5]
+    validation:
+      - sum(AmountExcludingTax) must equal 116051000.00
+      - each TaxAmount must equal AmountExcludingTax * 0.05
+      - MilestoneDueDate must fall inside the contract period — M6 (May 2026) will FAIL this check
+    blocking: true
+    notes: >
+      M6 falls after the 31 Mar 2026 contract end date. Either extend
+      ContractEndDate or agree a revised M6 date before this step.
+
+  - step: 7
+    name: Revenue recognition setup
+    payloadFile: 06_revenue_recognition.json
+    calls:
+      - { method: POST, path: /ProjectEstimateProjects, body: "each of ProjectEstimateProjects[0..1]", x-verify: true }
+    dependsOn: [6]
+    notes: >
+      Set the completion method to manual so the OUTPUT-based percentage from
+      revenueRecognitionSchedule can be supplied. The D365 default is cost-based
+      and would not reflect the IFRS 15 measure of progress.
+
+  - step: 8
+    name: Historical catch-up — invoices already raised (INV-001 to INV-004)
+    payloadFile: 05_invoice_schedule.json
+    calls:
+      - { method: POST, path: /ProjectInvoiceProposalHeaders, body: "headers where PostingStatus = Posted", x-verify: true }
+      - { method: POST, path: /ProjectInvoiceProposalOnAccountLines, body: "matching on-account lines", x-verify: true }
+    dependsOn: [7]
+    notes: >
+      Only required if these four invoices are being migrated rather than already
+      present in D365. If they exist, skip and reconcile instead. Do NOT post
+      into a closed fiscal period — agree the migration cut-off date first.
+
+  - step: 9
+    name: IFRS 15 audit metadata
+    payloadFile: 03_ifrs15_performance_obligations.json, 01_project_contract.json
+    calls:
+      - method: POST
+        path: "/{YourIfrs15ExtensionEntity}"
+        body: "ifrs15PerformanceObligations, fiveStepModel, transactionPrice, contractTermsExtension"
+    dependsOn: [5]
+    x-verify: true
+    notes: >
+      No standard F&O entity holds IFRS 15 judgements. Options, in order of
+      preference: a custom extension table exposed as a data entity; extended
+      fields on ProjTable/ProjectContract; or an attached document record.
+      This data does not post to the ledger — it exists for audit traceability
+      and for the LD / constraint re-assessment at each period close.
+
+  - step: 10
+    name: Ongoing lifecycle — per milestone, on acceptance
+    recurring: true
+    calls:
+      - method: PATCH
+        path: "/ProjectWorkBreakdownStructureTasks(...)"
+        body: "TaskPercentComplete = 100"
+      - method: PATCH
+        path: "/ProjectBillingScheduleLines(...)"
+        body: "MilestoneStatus = Completed"
+      - method: POST
+        path: /ProjectInvoiceProposalHeaders
+        body: "the matching invoice from 05_invoice_schedule.json"
+      - method: PATCH
+        path: "/ProjectEstimateProjects(...)"
+        body: "CompletionPercent from 06_revenue_recognition.json"
+    notes: >
+      Next due: M4 / INV-005 (May 2025), then M5 / INV-006 (Nov 2025) and
+      M6 / INV-007 (May 2026).
+
+x-error-handling:
+  409: Record exists — treat as success and continue (idempotent replay).
+  400: Validation failure. Most likely causes here are an unknown SalesTaxGroup,
+       a PaymentTerms code that does not exist, or a milestone date outside the
+       contract period.
+  401: Token expired. Re-acquire; tokens are valid for 1 hour.
+  404: Entity set not found — the public entity name differs in this version.
+       Return to step 0.
+  429: Throttled. Honour Retry-After; F&O applies priority-based throttling to
+       OData. Load sequentially, not in parallel.
+
+x-rollback:
+  strategy: >
+    Run against a sandbox first. F&O has no transactional rollback across OData
+    calls, so record every created key as you go and delete in reverse dependency
+    order on failure. Once any invoice proposal is POSTED it cannot be deleted —
+    it must be credited. Complete steps 1 to 7 and verify before attempting step 8.
+
+x-preconditions-before-production:
+  - Confirm the per-milestone POB-1 / POB-2 split against Commercial Proposal Appendix B (currently pro-rata).
+  - Resolve the AED 1,422 rounding variance and agree which package absorbs it.
+  - Quantify the 1 Apr 2023 to 19 Sep 2023 retroactive revenue catch-up with the auditors.
+  - Confirm or extend the M6 date so it sits inside the contract period.
+  - Confirm the fiscal calendar (Apr-Mar vs Jan-Dec) for the Daypop legal entity.
+  - Confirm DataAreaId, CustomerAccount, tax group and chart-of-accounts mappings.

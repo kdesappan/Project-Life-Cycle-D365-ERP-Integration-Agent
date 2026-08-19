@@ -1,0 +1,1068 @@
+{
+  "_meta": {
+    "sourceDocument": "Engagement Letter No. 01 - R100 Crisis and Emergency Management Platform",
+    "sourceAnalysis": "Project agent 1a - Engagement Letter - Presight and Daypop_IFRS15_Analysis.xlsx",
+    "extractedOn": "2026-08-12",
+    "accountingFramework": "IFRS 15",
+    "payloadVersion": "1.0.0",
+    "purpose": "Month-end revenue recognition schedule. Drives the fixed-price percentage-of-completion estimate process, the WIP/contract asset roll-forward and the period-end journal. One row per fiscal period from Apr 2023 to May 2026."
+  },
+  "method": {
+    "revenueRecognitionMethod": "CompletedPercentage (percentage of completion)",
+    "ifrs15MeasureOfProgress": "OUTPUT method - accepted milestone value as a proportion of total POB value (IFRS 15.39)",
+    "notCostToCost": "Do NOT drive completion from cost-to-cost. D365 fixed-price projects default to a cost-based completion percentage; the percentage must be overridden with the accepted-milestone value in this schedule, or configured to a manual completion percentage on the estimate.",
+    "recognitionPointTiming": "Revenue is recognised in the period in which the delivery package is formally accepted. Between acceptances the completion percentage is unchanged and no revenue is posted.",
+    "reversalOfEstimates": "Run the estimate/elimination process at each period end so accrued revenue is reversed and re-accrued on the D365 standard cycle.",
+    "currency": "AED"
+  },
+  "ProjectEstimateProjects": [
+    {
+      "dataAreaId": "DPTP",
+      "ProjectId": "R100-EL01-01",
+      "EstimateProjectId": "EST-R100-EL01-01",
+      "CostTemplateId": "CT-FP-MILESTONE",
+      "PeriodFrequency": "Monthly",
+      "CompletionMethod": "ManualCompletionPercentage",
+      "TotalContractValueExcludingTax": 59832268.0,
+      "_note": "Completion percentage per period is supplied from revenueRecognitionSchedule below."
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProjectId": "R100-EL01-02",
+      "EstimateProjectId": "EST-R100-EL01-02",
+      "CostTemplateId": "CT-FP-MILESTONE",
+      "PeriodFrequency": "Monthly",
+      "CompletionMethod": "ManualCompletionPercentage",
+      "TotalContractValueExcludingTax": 56218732.0,
+      "_note": "Completion percentage per period is supplied from revenueRecognitionSchedule below."
+    }
+  ],
+  "revenueRecognitionSchedule": [
+    {
+      "fiscalPeriod": "2023-04",
+      "periodEndDate": "2023-04-30",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 0.0,
+      "cumulativeRevenuePob2": 0.0,
+      "cumulativeRevenueTotal": 0.0,
+      "percentCompletePob1": 0.0,
+      "percentCompletePob2": 0.0,
+      "percentCompleteTotal": 0.0,
+      "billedToDateExcludingTax": 0.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2023-05",
+      "periodEndDate": "2023-05-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 0.0,
+      "cumulativeRevenuePob2": 0.0,
+      "cumulativeRevenueTotal": 0.0,
+      "percentCompletePob1": 0.0,
+      "percentCompletePob2": 0.0,
+      "percentCompleteTotal": 0.0,
+      "billedToDateExcludingTax": 0.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2023-06",
+      "periodEndDate": "2023-06-30",
+      "milestoneEvents": [
+        "M0"
+      ],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 14278385.0,
+      "revenueRecognisedTotal": 14278385.0,
+      "cumulativeRevenuePob1": 0.0,
+      "cumulativeRevenuePob2": 14278385.0,
+      "cumulativeRevenueTotal": 14278385.0,
+      "percentCompletePob1": 0.0,
+      "percentCompletePob2": 25.4,
+      "percentCompleteTotal": 12.3,
+      "billedToDateExcludingTax": 14278385.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": true
+    },
+    {
+      "fiscalPeriod": "2023-07",
+      "periodEndDate": "2023-07-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 0.0,
+      "cumulativeRevenuePob2": 14278385.0,
+      "cumulativeRevenueTotal": 14278385.0,
+      "percentCompletePob1": 0.0,
+      "percentCompletePob2": 25.4,
+      "percentCompleteTotal": 12.3,
+      "billedToDateExcludingTax": 14278385.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2023-08",
+      "periodEndDate": "2023-08-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 0.0,
+      "cumulativeRevenuePob2": 14278385.0,
+      "cumulativeRevenueTotal": 14278385.0,
+      "percentCompletePob1": 0.0,
+      "percentCompletePob2": 25.4,
+      "percentCompleteTotal": 12.3,
+      "billedToDateExcludingTax": 14278385.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2023-09",
+      "periodEndDate": "2023-09-30",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 0.0,
+      "cumulativeRevenuePob2": 14278385.0,
+      "cumulativeRevenueTotal": 14278385.0,
+      "percentCompletePob1": 0.0,
+      "percentCompletePob2": 25.4,
+      "percentCompleteTotal": 12.3,
+      "billedToDateExcludingTax": 14278385.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2023-10",
+      "periodEndDate": "2023-10-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 0.0,
+      "cumulativeRevenuePob2": 14278385.0,
+      "cumulativeRevenueTotal": 14278385.0,
+      "percentCompletePob1": 0.0,
+      "percentCompletePob2": 25.4,
+      "percentCompleteTotal": 12.3,
+      "billedToDateExcludingTax": 14278385.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2023-11",
+      "periodEndDate": "2023-11-30",
+      "milestoneEvents": [
+        "M1"
+      ],
+      "revenueRecognisedPob1": 21013259.85,
+      "revenueRecognisedPob2": 14729567.15,
+      "revenueRecognisedTotal": 35742827.0,
+      "cumulativeRevenuePob1": 21013259.85,
+      "cumulativeRevenuePob2": 29007952.15,
+      "cumulativeRevenueTotal": 50021212.0,
+      "percentCompletePob1": 35.12,
+      "percentCompletePob2": 51.6,
+      "percentCompleteTotal": 43.1,
+      "billedToDateExcludingTax": 50021212.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": true
+    },
+    {
+      "fiscalPeriod": "2023-12",
+      "periodEndDate": "2023-12-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 21013259.85,
+      "cumulativeRevenuePob2": 29007952.15,
+      "cumulativeRevenueTotal": 50021212.0,
+      "percentCompletePob1": 35.12,
+      "percentCompletePob2": 51.6,
+      "percentCompleteTotal": 43.1,
+      "billedToDateExcludingTax": 50021212.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2024-01",
+      "periodEndDate": "2024-01-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 21013259.85,
+      "cumulativeRevenuePob2": 29007952.15,
+      "cumulativeRevenueTotal": 50021212.0,
+      "percentCompletePob1": 35.12,
+      "percentCompletePob2": 51.6,
+      "percentCompleteTotal": 43.1,
+      "billedToDateExcludingTax": 50021212.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2024-02",
+      "periodEndDate": "2024-02-29",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 21013259.85,
+      "cumulativeRevenuePob2": 29007952.15,
+      "cumulativeRevenueTotal": 50021212.0,
+      "percentCompletePob1": 35.12,
+      "percentCompletePob2": 51.6,
+      "percentCompleteTotal": 43.1,
+      "billedToDateExcludingTax": 50021212.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2024-03",
+      "periodEndDate": "2024-03-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 21013259.85,
+      "cumulativeRevenuePob2": 29007952.15,
+      "cumulativeRevenueTotal": 50021212.0,
+      "percentCompletePob1": 35.12,
+      "percentCompletePob2": 51.6,
+      "percentCompleteTotal": 43.1,
+      "billedToDateExcludingTax": 50021212.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2024-04",
+      "periodEndDate": "2024-04-30",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 21013259.85,
+      "cumulativeRevenuePob2": 29007952.15,
+      "cumulativeRevenueTotal": 50021212.0,
+      "percentCompletePob1": 35.12,
+      "percentCompletePob2": 51.6,
+      "percentCompleteTotal": 43.1,
+      "billedToDateExcludingTax": 50021212.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2024-05",
+      "periodEndDate": "2024-05-31",
+      "milestoneEvents": [
+        "M2"
+      ],
+      "revenueRecognisedPob1": 15422625.7,
+      "revenueRecognisedPob2": 10810726.3,
+      "revenueRecognisedTotal": 26233352.0,
+      "cumulativeRevenuePob1": 36435885.55,
+      "cumulativeRevenuePob2": 39818678.45,
+      "cumulativeRevenueTotal": 76254564.0,
+      "percentCompletePob1": 60.9,
+      "percentCompletePob2": 70.83,
+      "percentCompleteTotal": 65.71,
+      "billedToDateExcludingTax": 76254564.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": true
+    },
+    {
+      "fiscalPeriod": "2024-06",
+      "periodEndDate": "2024-06-30",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 36435885.55,
+      "cumulativeRevenuePob2": 39818678.45,
+      "cumulativeRevenueTotal": 76254564.0,
+      "percentCompletePob1": 60.9,
+      "percentCompletePob2": 70.83,
+      "percentCompleteTotal": 65.71,
+      "billedToDateExcludingTax": 76254564.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2024-07",
+      "periodEndDate": "2024-07-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 36435885.55,
+      "cumulativeRevenuePob2": 39818678.45,
+      "cumulativeRevenueTotal": 76254564.0,
+      "percentCompletePob1": 60.9,
+      "percentCompletePob2": 70.83,
+      "percentCompleteTotal": 65.71,
+      "billedToDateExcludingTax": 76254564.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2024-08",
+      "periodEndDate": "2024-08-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 36435885.55,
+      "cumulativeRevenuePob2": 39818678.45,
+      "cumulativeRevenueTotal": 76254564.0,
+      "percentCompletePob1": 60.9,
+      "percentCompletePob2": 70.83,
+      "percentCompleteTotal": 65.71,
+      "billedToDateExcludingTax": 76254564.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2024-09",
+      "periodEndDate": "2024-09-30",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 36435885.55,
+      "cumulativeRevenuePob2": 39818678.45,
+      "cumulativeRevenueTotal": 76254564.0,
+      "percentCompletePob1": 60.9,
+      "percentCompletePob2": 70.83,
+      "percentCompleteTotal": 65.71,
+      "billedToDateExcludingTax": 76254564.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2024-10",
+      "periodEndDate": "2024-10-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 36435885.55,
+      "cumulativeRevenuePob2": 39818678.45,
+      "cumulativeRevenueTotal": 76254564.0,
+      "percentCompletePob1": 60.9,
+      "percentCompletePob2": 70.83,
+      "percentCompleteTotal": 65.71,
+      "billedToDateExcludingTax": 76254564.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2024-11",
+      "periodEndDate": "2024-11-30",
+      "milestoneEvents": [
+        "M3"
+      ],
+      "revenueRecognisedPob1": 7244669.6,
+      "revenueRecognisedPob2": 5078262.4,
+      "revenueRecognisedTotal": 12322932.0,
+      "cumulativeRevenuePob1": 43680555.15,
+      "cumulativeRevenuePob2": 44896940.85,
+      "cumulativeRevenueTotal": 88577496.0,
+      "percentCompletePob1": 73.01,
+      "percentCompletePob2": 79.86,
+      "percentCompleteTotal": 76.33,
+      "billedToDateExcludingTax": 88577496.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": true
+    },
+    {
+      "fiscalPeriod": "2024-12",
+      "periodEndDate": "2024-12-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 43680555.15,
+      "cumulativeRevenuePob2": 44896940.85,
+      "cumulativeRevenueTotal": 88577496.0,
+      "percentCompletePob1": 73.01,
+      "percentCompletePob2": 79.86,
+      "percentCompleteTotal": 76.33,
+      "billedToDateExcludingTax": 88577496.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2025-01",
+      "periodEndDate": "2025-01-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 43680555.15,
+      "cumulativeRevenuePob2": 44896940.85,
+      "cumulativeRevenueTotal": 88577496.0,
+      "percentCompletePob1": 73.01,
+      "percentCompletePob2": 79.86,
+      "percentCompleteTotal": 76.33,
+      "billedToDateExcludingTax": 88577496.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2025-02",
+      "periodEndDate": "2025-02-28",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 43680555.15,
+      "cumulativeRevenuePob2": 44896940.85,
+      "cumulativeRevenueTotal": 88577496.0,
+      "percentCompletePob1": 73.01,
+      "percentCompletePob2": 79.86,
+      "percentCompleteTotal": 76.33,
+      "billedToDateExcludingTax": 88577496.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2025-03",
+      "periodEndDate": "2025-03-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 43680555.15,
+      "cumulativeRevenuePob2": 44896940.85,
+      "cumulativeRevenueTotal": 88577496.0,
+      "percentCompletePob1": 73.01,
+      "percentCompletePob2": 79.86,
+      "percentCompleteTotal": 76.33,
+      "billedToDateExcludingTax": 88577496.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2025-04",
+      "periodEndDate": "2025-04-30",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 43680555.15,
+      "cumulativeRevenuePob2": 44896940.85,
+      "cumulativeRevenueTotal": 88577496.0,
+      "percentCompletePob1": 73.01,
+      "percentCompletePob2": 79.86,
+      "percentCompleteTotal": 76.33,
+      "billedToDateExcludingTax": 88577496.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2025-05",
+      "periodEndDate": "2025-05-31",
+      "milestoneEvents": [
+        "M4"
+      ],
+      "revenueRecognisedPob1": 7244669.6,
+      "revenueRecognisedPob2": 5078262.4,
+      "revenueRecognisedTotal": 12322932.0,
+      "cumulativeRevenuePob1": 50925224.75,
+      "cumulativeRevenuePob2": 49975203.25,
+      "cumulativeRevenueTotal": 100900428.0,
+      "percentCompletePob1": 85.11,
+      "percentCompletePob2": 88.89,
+      "percentCompleteTotal": 86.94,
+      "billedToDateExcludingTax": 100900428.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": true
+    },
+    {
+      "fiscalPeriod": "2025-06",
+      "periodEndDate": "2025-06-30",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 50925224.75,
+      "cumulativeRevenuePob2": 49975203.25,
+      "cumulativeRevenueTotal": 100900428.0,
+      "percentCompletePob1": 85.11,
+      "percentCompletePob2": 88.89,
+      "percentCompleteTotal": 86.94,
+      "billedToDateExcludingTax": 100900428.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2025-07",
+      "periodEndDate": "2025-07-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 50925224.75,
+      "cumulativeRevenuePob2": 49975203.25,
+      "cumulativeRevenueTotal": 100900428.0,
+      "percentCompletePob1": 85.11,
+      "percentCompletePob2": 88.89,
+      "percentCompleteTotal": 86.94,
+      "billedToDateExcludingTax": 100900428.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2025-08",
+      "periodEndDate": "2025-08-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 50925224.75,
+      "cumulativeRevenuePob2": 49975203.25,
+      "cumulativeRevenueTotal": 100900428.0,
+      "percentCompletePob1": 85.11,
+      "percentCompletePob2": 88.89,
+      "percentCompleteTotal": 86.94,
+      "billedToDateExcludingTax": 100900428.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2025-09",
+      "periodEndDate": "2025-09-30",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 50925224.75,
+      "cumulativeRevenuePob2": 49975203.25,
+      "cumulativeRevenueTotal": 100900428.0,
+      "percentCompletePob1": 85.11,
+      "percentCompletePob2": 88.89,
+      "percentCompleteTotal": 86.94,
+      "billedToDateExcludingTax": 100900428.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2025-10",
+      "periodEndDate": "2025-10-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 50925224.75,
+      "cumulativeRevenuePob2": 49975203.25,
+      "cumulativeRevenueTotal": 100900428.0,
+      "percentCompletePob1": 85.11,
+      "percentCompletePob2": 88.89,
+      "percentCompleteTotal": 86.94,
+      "billedToDateExcludingTax": 100900428.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2025-11",
+      "periodEndDate": "2025-11-30",
+      "milestoneEvents": [
+        "M5"
+      ],
+      "revenueRecognisedPob1": 4453939.63,
+      "revenueRecognisedPob2": 3122057.37,
+      "revenueRecognisedTotal": 7575997.0,
+      "cumulativeRevenuePob1": 55379164.38,
+      "cumulativeRevenuePob2": 53097260.62,
+      "cumulativeRevenueTotal": 108476425.0,
+      "percentCompletePob1": 92.56,
+      "percentCompletePob2": 94.45,
+      "percentCompleteTotal": 93.47,
+      "billedToDateExcludingTax": 108476425.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": true
+    },
+    {
+      "fiscalPeriod": "2025-12",
+      "periodEndDate": "2025-12-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 55379164.38,
+      "cumulativeRevenuePob2": 53097260.62,
+      "cumulativeRevenueTotal": 108476425.0,
+      "percentCompletePob1": 92.56,
+      "percentCompletePob2": 94.45,
+      "percentCompleteTotal": 93.47,
+      "billedToDateExcludingTax": 108476425.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2026-01",
+      "periodEndDate": "2026-01-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 55379164.38,
+      "cumulativeRevenuePob2": 53097260.62,
+      "cumulativeRevenueTotal": 108476425.0,
+      "percentCompletePob1": 92.56,
+      "percentCompletePob2": 94.45,
+      "percentCompleteTotal": 93.47,
+      "billedToDateExcludingTax": 108476425.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2026-02",
+      "periodEndDate": "2026-02-28",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 55379164.38,
+      "cumulativeRevenuePob2": 53097260.62,
+      "cumulativeRevenueTotal": 108476425.0,
+      "percentCompletePob1": 92.56,
+      "percentCompletePob2": 94.45,
+      "percentCompleteTotal": 93.47,
+      "billedToDateExcludingTax": 108476425.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2026-03",
+      "periodEndDate": "2026-03-31",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 55379164.38,
+      "cumulativeRevenuePob2": 53097260.62,
+      "cumulativeRevenueTotal": 108476425.0,
+      "percentCompletePob1": 92.56,
+      "percentCompletePob2": 94.45,
+      "percentCompleteTotal": 93.47,
+      "billedToDateExcludingTax": 108476425.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2026-04",
+      "periodEndDate": "2026-04-30",
+      "milestoneEvents": [],
+      "revenueRecognisedPob1": 0.0,
+      "revenueRecognisedPob2": 0.0,
+      "revenueRecognisedTotal": 0.0,
+      "cumulativeRevenuePob1": 55379164.38,
+      "cumulativeRevenuePob2": 53097260.62,
+      "cumulativeRevenueTotal": 108476425.0,
+      "percentCompletePob1": 92.56,
+      "percentCompletePob2": 94.45,
+      "percentCompleteTotal": 93.47,
+      "billedToDateExcludingTax": 108476425.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": false
+    },
+    {
+      "fiscalPeriod": "2026-05",
+      "periodEndDate": "2026-05-31",
+      "milestoneEvents": [
+        "M6"
+      ],
+      "revenueRecognisedPob1": 4453103.62,
+      "revenueRecognisedPob2": 3121471.38,
+      "revenueRecognisedTotal": 7574575.0,
+      "cumulativeRevenuePob1": 59832268.0,
+      "cumulativeRevenuePob2": 56218732.0,
+      "cumulativeRevenueTotal": 116051000.0,
+      "percentCompletePob1": 100.0,
+      "percentCompletePob2": 100.0,
+      "percentCompleteTotal": 100.0,
+      "billedToDateExcludingTax": 116051000.0,
+      "contractAssetBalance": 0.0,
+      "contractLiabilityBalance": -0.0,
+      "postingRequired": true
+    }
+  ],
+  "postingEvents": [
+    {
+      "fiscalPeriod": "2023-06",
+      "periodEndDate": "2023-06-30",
+      "milestoneEvents": [
+        "M0"
+      ],
+      "journal": [
+        {
+          "line": 1,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 0.0,
+          "credit": 0.0
+        },
+        {
+          "line": 2,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 0.0,
+          "credit": 0.0
+        },
+        {
+          "line": 3,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 14278385.0,
+          "credit": 0.0
+        },
+        {
+          "line": 4,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 0.0,
+          "credit": 14278385.0
+        }
+      ],
+      "_note": "Where the invoice is raised in the same period, the on-account invoice posting clears the contract asset to receivables and recognises VAT output. Where acceptance and invoicing fall in different periods, the difference sits in contract asset (performance ahead of billing) or contract liability (billing ahead of performance)."
+    },
+    {
+      "fiscalPeriod": "2023-11",
+      "periodEndDate": "2023-11-30",
+      "milestoneEvents": [
+        "M1"
+      ],
+      "journal": [
+        {
+          "line": 1,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 21013259.85,
+          "credit": 0.0
+        },
+        {
+          "line": 2,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 0.0,
+          "credit": 21013259.85
+        },
+        {
+          "line": 3,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 14729567.15,
+          "credit": 0.0
+        },
+        {
+          "line": 4,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 0.0,
+          "credit": 14729567.15
+        }
+      ],
+      "_note": "Where the invoice is raised in the same period, the on-account invoice posting clears the contract asset to receivables and recognises VAT output. Where acceptance and invoicing fall in different periods, the difference sits in contract asset (performance ahead of billing) or contract liability (billing ahead of performance)."
+    },
+    {
+      "fiscalPeriod": "2024-05",
+      "periodEndDate": "2024-05-31",
+      "milestoneEvents": [
+        "M2"
+      ],
+      "journal": [
+        {
+          "line": 1,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 15422625.7,
+          "credit": 0.0
+        },
+        {
+          "line": 2,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 0.0,
+          "credit": 15422625.7
+        },
+        {
+          "line": 3,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 10810726.3,
+          "credit": 0.0
+        },
+        {
+          "line": 4,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 0.0,
+          "credit": 10810726.3
+        }
+      ],
+      "_note": "Where the invoice is raised in the same period, the on-account invoice posting clears the contract asset to receivables and recognises VAT output. Where acceptance and invoicing fall in different periods, the difference sits in contract asset (performance ahead of billing) or contract liability (billing ahead of performance)."
+    },
+    {
+      "fiscalPeriod": "2024-11",
+      "periodEndDate": "2024-11-30",
+      "milestoneEvents": [
+        "M3"
+      ],
+      "journal": [
+        {
+          "line": 1,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 7244669.6,
+          "credit": 0.0
+        },
+        {
+          "line": 2,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 0.0,
+          "credit": 7244669.6
+        },
+        {
+          "line": 3,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 5078262.4,
+          "credit": 0.0
+        },
+        {
+          "line": 4,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 0.0,
+          "credit": 5078262.4
+        }
+      ],
+      "_note": "Where the invoice is raised in the same period, the on-account invoice posting clears the contract asset to receivables and recognises VAT output. Where acceptance and invoicing fall in different periods, the difference sits in contract asset (performance ahead of billing) or contract liability (billing ahead of performance)."
+    },
+    {
+      "fiscalPeriod": "2025-05",
+      "periodEndDate": "2025-05-31",
+      "milestoneEvents": [
+        "M4"
+      ],
+      "journal": [
+        {
+          "line": 1,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 7244669.6,
+          "credit": 0.0
+        },
+        {
+          "line": 2,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 0.0,
+          "credit": 7244669.6
+        },
+        {
+          "line": 3,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 5078262.4,
+          "credit": 0.0
+        },
+        {
+          "line": 4,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 0.0,
+          "credit": 5078262.4
+        }
+      ],
+      "_note": "Where the invoice is raised in the same period, the on-account invoice posting clears the contract asset to receivables and recognises VAT output. Where acceptance and invoicing fall in different periods, the difference sits in contract asset (performance ahead of billing) or contract liability (billing ahead of performance)."
+    },
+    {
+      "fiscalPeriod": "2025-11",
+      "periodEndDate": "2025-11-30",
+      "milestoneEvents": [
+        "M5"
+      ],
+      "journal": [
+        {
+          "line": 1,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 4453939.63,
+          "credit": 0.0
+        },
+        {
+          "line": 2,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 0.0,
+          "credit": 4453939.63
+        },
+        {
+          "line": 3,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 3122057.37,
+          "credit": 0.0
+        },
+        {
+          "line": 4,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 0.0,
+          "credit": 3122057.37
+        }
+      ],
+      "_note": "Where the invoice is raised in the same period, the on-account invoice posting clears the contract asset to receivables and recognises VAT output. Where acceptance and invoicing fall in different periods, the difference sits in contract asset (performance ahead of billing) or contract liability (billing ahead of performance)."
+    },
+    {
+      "fiscalPeriod": "2026-05",
+      "periodEndDate": "2026-05-31",
+      "milestoneEvents": [
+        "M6"
+      ],
+      "journal": [
+        {
+          "line": 1,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 4453103.62,
+          "credit": 0.0
+        },
+        {
+          "line": 2,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-01",
+          "debit": 0.0,
+          "credit": 4453103.62
+        },
+        {
+          "line": 3,
+          "account": "Contract asset / accrued revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 3121471.38,
+          "credit": 0.0
+        },
+        {
+          "line": 4,
+          "account": "Project revenue",
+          "projectId": "R100-EL01-02",
+          "debit": 0.0,
+          "credit": 3121471.38
+        }
+      ],
+      "_note": "Where the invoice is raised in the same period, the on-account invoice posting clears the contract asset to receivables and recognises VAT output. Where acceptance and invoicing fall in different periods, the difference sits in contract asset (performance ahead of billing) or contract liability (billing ahead of performance)."
+    }
+  ],
+  "annualSummary": [
+    {
+      "fiscalYearEndingMar": "FY2024 (Apr 2023 - Mar 2024)",
+      "revenuePob1": 21013259.85,
+      "revenuePob2": 29007952.15,
+      "revenueTotal": 50021212.0
+    },
+    {
+      "fiscalYearEndingMar": "FY2025 (Apr 2024 - Mar 2025)",
+      "revenuePob1": 22667295.3,
+      "revenuePob2": 15888988.7,
+      "revenueTotal": 38556284.0
+    },
+    {
+      "fiscalYearEndingMar": "FY2026 (Apr 2025 - Mar 2026)",
+      "revenuePob1": 11698609.23,
+      "revenuePob2": 8200319.77,
+      "revenueTotal": 19898929.0
+    },
+    {
+      "fiscalYearEndingMar": "FY2027 (Apr 2026 - Mar 2027)",
+      "revenuePob1": 4453103.62,
+      "revenuePob2": 3121471.38,
+      "revenueTotal": 7574575.0
+    }
+  ],
+  "controlTotals": {
+    "totalRevenuePob1": 59832268.0,
+    "totalRevenuePob2": 56218732.0,
+    "totalRevenue": 116051000.0,
+    "transactionPrice": 116051000.0,
+    "finalPercentCompletePob1": 100.0,
+    "finalPercentCompletePob2": 100.0
+  },
+  "monthEndControlChecklist": [
+    "Confirm whether any delivery package was formally accepted in the period; without acceptance the completion percentage does not move.",
+    "Re-assess the liquidated damages constraint. If an LD notice is issued or a delay makes one highly probable, reduce the transaction price and re-allocate proportionally across POB-1 and POB-2, then post a cumulative catch-up.",
+    "Reconcile the contract asset and contract liability balances to the billing schedule.",
+    "Confirm VAT output posted equals 5% of amounts invoiced in the period and that no LD amount has been included in a VAT-bearing line.",
+    "Confirm the Performance Bond remains in force (required for the life of the contract plus 3 months).",
+    "For periods from May 2025 onward, check whether INV-005 to INV-007 are due to be raised on acceptance."
+  ],
+  "_openItems": [
+    {
+      "severity": "High",
+      "item": "Retroactive commencement. Services began 1 April 2023 but the Engagement Letter was signed 19 September 2023. A catch-up entry may be required at 19 September 2023 for performance completed between those dates. This schedule recognises nothing before the M0 acceptance date of 19 June 2023 and contains NO catch-up amount, because the source analysis does not quantify one. Quantify with the auditors and insert the amount before this schedule is used for posting."
+    },
+    {
+      "severity": "High",
+      "item": "The POB-1 / POB-2 split per milestone is a pro-rata estimate (see 04_milestone_billing_schedule.json data quality findings). Revenue by POB in every period depends on it. Confirm against Commercial Proposal Appendix B."
+    },
+    {
+      "severity": "Medium",
+      "item": "Fiscal calendar. The contract runs April to March. Confirm whether the D365 fiscal calendar for the Daypop legal entity is April-March or January-December and re-map the fiscalPeriod keys if it is calendar-year."
+    },
+    {
+      "severity": "Medium",
+      "item": "The recognition profile here follows the milestone acceptance dates literally, which produces revenue in only 7 of 38 periods. If the auditors prefer a smoother depiction for the O&M element, POB components may need to be split further - O&M straight-line, implementation on milestones. That would change the POB structure in file 03."
+    }
+  ]
+}

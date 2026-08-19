@@ -1,0 +1,363 @@
+{
+  "_meta": {
+    "sourceDocument": "Engagement Letter No. 01 - R100 Crisis and Emergency Management Platform",
+    "sourceAnalysis": "Project agent 1a - Engagement Letter - Presight and Daypop_IFRS15_Analysis.xlsx",
+    "extractedOn": "2026-08-12",
+    "accountingFramework": "IFRS 15",
+    "payloadVersion": "1.0.0",
+    "purpose": "The 7 contractual milestones - simultaneously the billing trigger and the IFRS 15 revenue recognition trigger. Post as ProjectBillingScheduleLines (fixed-price on-account billing) and mirror as WBS milestones."
+  },
+  "ProjectBillingSchedules": [
+    {
+      "dataAreaId": "DPTP",
+      "BillingScheduleId": "BS-PC-EL01-R100",
+      "ProjectContractId": "PC-EL01-R100",
+      "Description": "7-package milestone billing schedule per Commercial Proposal v16.1 (Appendix B)",
+      "CurrencyCode": "AED",
+      "TotalAmountExcludingTax": 116051000.0,
+      "NumberOfLines": 7
+    }
+  ],
+  "ProjectBillingScheduleLines": [
+    {
+      "dataAreaId": "DPTP",
+      "BillingScheduleId": "BS-PC-EL01-R100",
+      "LineNumber": 1,
+      "MilestoneId": "M0",
+      "Description": "Contract Signoff - Perpetual Licence Delivery (60%)",
+      "MilestoneDueDate": "2023-06-30",
+      "BillingDate": "2023-06-19",
+      "AmountExcludingTax": 14278385.0,
+      "TaxAmount": 713919.25,
+      "AmountIncludingTax": 14992304.25,
+      "CurrencyCode": "AED",
+      "SalesTaxGroup": "AE-VAT-STD",
+      "PaymentTerms": "N060",
+      "MilestoneStatus": "Completed",
+      "BillingStatus": "Invoiced"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "BillingScheduleId": "BS-PC-EL01-R100",
+      "LineNumber": 2,
+      "MilestoneId": "M1",
+      "Description": "Package 1 Delivery",
+      "MilestoneDueDate": "2023-11-30",
+      "BillingDate": "2023-11-30",
+      "AmountExcludingTax": 35742827.0,
+      "TaxAmount": 1787141.35,
+      "AmountIncludingTax": 37529968.35,
+      "CurrencyCode": "AED",
+      "SalesTaxGroup": "AE-VAT-STD",
+      "PaymentTerms": "N060",
+      "MilestoneStatus": "Completed",
+      "BillingStatus": "Invoiced"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "BillingScheduleId": "BS-PC-EL01-R100",
+      "LineNumber": 3,
+      "MilestoneId": "M2",
+      "Description": "Package 2 Delivery",
+      "MilestoneDueDate": "2024-05-31",
+      "BillingDate": "2024-05-31",
+      "AmountExcludingTax": 26233352.0,
+      "TaxAmount": 1311667.6,
+      "AmountIncludingTax": 27545019.6,
+      "CurrencyCode": "AED",
+      "SalesTaxGroup": "AE-VAT-STD",
+      "PaymentTerms": "N060",
+      "MilestoneStatus": "Completed",
+      "BillingStatus": "Invoiced"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "BillingScheduleId": "BS-PC-EL01-R100",
+      "LineNumber": 4,
+      "MilestoneId": "M3",
+      "Description": "Package 3 Delivery",
+      "MilestoneDueDate": "2024-11-30",
+      "BillingDate": "2024-11-30",
+      "AmountExcludingTax": 12322932.0,
+      "TaxAmount": 616146.6,
+      "AmountIncludingTax": 12939078.6,
+      "CurrencyCode": "AED",
+      "SalesTaxGroup": "AE-VAT-STD",
+      "PaymentTerms": "N060",
+      "MilestoneStatus": "Completed",
+      "BillingStatus": "Invoiced"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "BillingScheduleId": "BS-PC-EL01-R100",
+      "LineNumber": 5,
+      "MilestoneId": "M4",
+      "Description": "Package 4 Delivery",
+      "MilestoneDueDate": "2025-05-31",
+      "BillingDate": "2025-05-31",
+      "AmountExcludingTax": 12322932.0,
+      "TaxAmount": 616146.6,
+      "AmountIncludingTax": 12939078.6,
+      "CurrencyCode": "AED",
+      "SalesTaxGroup": "AE-VAT-STD",
+      "PaymentTerms": "N060",
+      "MilestoneStatus": "Pending",
+      "BillingStatus": "NotInvoiced"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "BillingScheduleId": "BS-PC-EL01-R100",
+      "LineNumber": 6,
+      "MilestoneId": "M5",
+      "Description": "Package 5 Delivery",
+      "MilestoneDueDate": "2025-11-30",
+      "BillingDate": "2025-11-30",
+      "AmountExcludingTax": 7575997.0,
+      "TaxAmount": 378799.85,
+      "AmountIncludingTax": 7954796.85,
+      "CurrencyCode": "AED",
+      "SalesTaxGroup": "AE-VAT-STD",
+      "PaymentTerms": "N060",
+      "MilestoneStatus": "Pending",
+      "BillingStatus": "NotInvoiced"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "BillingScheduleId": "BS-PC-EL01-R100",
+      "LineNumber": 7,
+      "MilestoneId": "M6",
+      "Description": "Package 6 Delivery - Final",
+      "MilestoneDueDate": "2026-05-31",
+      "BillingDate": "2026-05-31",
+      "AmountExcludingTax": 7574575.0,
+      "TaxAmount": 378728.75,
+      "AmountIncludingTax": 7953303.75,
+      "CurrencyCode": "AED",
+      "SalesTaxGroup": "AE-VAT-STD",
+      "PaymentTerms": "N060",
+      "MilestoneStatus": "Pending",
+      "BillingStatus": "NotInvoiced"
+    }
+  ],
+  "milestones": [
+    {
+      "milestoneId": "M0",
+      "milestoneName": "Contract Signoff - Perpetual Licence Delivery (60%)",
+      "scheduledDueDate": "2023-06-30",
+      "acceptanceDate": "2023-06-19",
+      "linkedContractLines": [
+        2
+      ],
+      "linkedPerformanceObligations": [
+        "POB-2"
+      ],
+      "amountExcludingTaxAsAnalysed": 14278385.0,
+      "amountExcludingTaxReconciled": 14278385.0,
+      "amountByPerformanceObligation": {
+        "POB-1": 0.0,
+        "POB-2": 14278385.0
+      },
+      "percentOfTransactionPrice": 12.3,
+      "percentOfPob1": 0.0,
+      "percentOfPob2": 25.4,
+      "acceptanceCriteria": "Execution of Engagement Letter and delivery of FMP System Core and Smart Connection Core & Dispatching Console perpetual licences (60% of licence value).",
+      "recognitionTrigger": "Engagement Letter signoff and licence delivery.",
+      "status": "Completed",
+      "sourcePercentOfPobValue": 24.7,
+      "_percentNote": "Percentages are rounded to 2dp for readability; residual rounding is carried on the largest milestone so each column sums to exactly 100.00. Use the amount fields, not the percentages, for posting."
+    },
+    {
+      "milestoneId": "M1",
+      "milestoneName": "Package 1 Delivery",
+      "scheduledDueDate": "2023-11-30",
+      "acceptanceDate": "2023-11-30",
+      "linkedContractLines": [
+        1,
+        2
+      ],
+      "linkedPerformanceObligations": [
+        "POB-1",
+        "POB-2"
+      ],
+      "amountExcludingTaxAsAnalysed": 35742827.0,
+      "amountExcludingTaxReconciled": 35742827.0,
+      "amountByPerformanceObligation": {
+        "POB-1": 21013259.85,
+        "POB-2": 14729567.15
+      },
+      "percentOfTransactionPrice": 30.79,
+      "percentOfPob1": 35.12,
+      "percentOfPob2": 26.21,
+      "acceptanceCriteria": "Delivery of FMP + Smart Connection perpetual licences (remaining 40%), Year 1 Backbone professional services (50%), Year 1 Backbone O&M (50%), Year 1 P&I professional services (50%), Year 1 P&I O&M (50%).",
+      "recognitionTrigger": "Formal customer acceptance of the delivery package per the delivery and acceptance provisions of the Technical Proposal and SLA (Appendix C).",
+      "status": "Completed",
+      "sourcePercentOfPobValue": 30.8
+    },
+    {
+      "milestoneId": "M2",
+      "milestoneName": "Package 2 Delivery",
+      "scheduledDueDate": "2024-05-31",
+      "acceptanceDate": "2024-05-31",
+      "linkedContractLines": [
+        1,
+        2
+      ],
+      "linkedPerformanceObligations": [
+        "POB-1",
+        "POB-2"
+      ],
+      "amountExcludingTaxAsAnalysed": 26233352.0,
+      "amountExcludingTaxReconciled": 26233352.0,
+      "amountByPerformanceObligation": {
+        "POB-1": 15422625.7,
+        "POB-2": 10810726.3
+      },
+      "percentOfTransactionPrice": 22.61,
+      "percentOfPob1": 25.78,
+      "percentOfPob2": 19.23,
+      "acceptanceCriteria": "Delivery of Year 1 Backbone professional services (remaining 50%), Year 1 Backbone O&M (remaining 50%), Year 1 P&I professional services (remaining 50%), Year 1 P&I O&M (remaining 50%).",
+      "recognitionTrigger": "Formal customer acceptance of the delivery package per the delivery and acceptance provisions of the Technical Proposal and SLA (Appendix C).",
+      "status": "Completed",
+      "sourcePercentOfPobValue": 22.6
+    },
+    {
+      "milestoneId": "M3",
+      "milestoneName": "Package 3 Delivery",
+      "scheduledDueDate": "2024-11-30",
+      "acceptanceDate": "2024-11-30",
+      "linkedContractLines": [
+        1,
+        2
+      ],
+      "linkedPerformanceObligations": [
+        "POB-1",
+        "POB-2"
+      ],
+      "amountExcludingTaxAsAnalysed": 12322932.0,
+      "amountExcludingTaxReconciled": 12322932.0,
+      "amountByPerformanceObligation": {
+        "POB-1": 7244669.6,
+        "POB-2": 5078262.4
+      },
+      "percentOfTransactionPrice": 10.62,
+      "percentOfPob1": 12.11,
+      "percentOfPob2": 9.03,
+      "acceptanceCriteria": "Delivery of Year 2 Backbone professional services (50%), Year 2 Backbone O&M (50%), Year 2 P&I professional services (50%), Year 2 P&I O&M (50%).",
+      "recognitionTrigger": "Formal customer acceptance of the delivery package per the delivery and acceptance provisions of the Technical Proposal and SLA (Appendix C).",
+      "status": "Completed",
+      "sourcePercentOfPobValue": 10.6
+    },
+    {
+      "milestoneId": "M4",
+      "milestoneName": "Package 4 Delivery",
+      "scheduledDueDate": "2025-05-31",
+      "acceptanceDate": "2025-05-31",
+      "linkedContractLines": [
+        1,
+        2
+      ],
+      "linkedPerformanceObligations": [
+        "POB-1",
+        "POB-2"
+      ],
+      "amountExcludingTaxAsAnalysed": 12322932.0,
+      "amountExcludingTaxReconciled": 12322932.0,
+      "amountByPerformanceObligation": {
+        "POB-1": 7244669.6,
+        "POB-2": 5078262.4
+      },
+      "percentOfTransactionPrice": 10.62,
+      "percentOfPob1": 12.11,
+      "percentOfPob2": 9.03,
+      "acceptanceCriteria": "Delivery of Year 2 Backbone professional services (remaining 50%), Year 2 Backbone O&M (remaining 50%), Year 2 P&I professional services (remaining 50%), Year 2 P&I O&M (remaining 50%).",
+      "recognitionTrigger": "Formal customer acceptance of the delivery package per the delivery and acceptance provisions of the Technical Proposal and SLA (Appendix C).",
+      "status": "Pending",
+      "sourcePercentOfPobValue": 10.6
+    },
+    {
+      "milestoneId": "M5",
+      "milestoneName": "Package 5 Delivery",
+      "scheduledDueDate": "2025-11-30",
+      "acceptanceDate": "2025-11-30",
+      "linkedContractLines": [
+        1,
+        2
+      ],
+      "linkedPerformanceObligations": [
+        "POB-1",
+        "POB-2"
+      ],
+      "amountExcludingTaxAsAnalysed": 7575997.0,
+      "amountExcludingTaxReconciled": 7575997.0,
+      "amountByPerformanceObligation": {
+        "POB-1": 4453939.63,
+        "POB-2": 3122057.37
+      },
+      "percentOfTransactionPrice": 6.53,
+      "percentOfPob1": 7.44,
+      "percentOfPob2": 5.55,
+      "acceptanceCriteria": "Delivery of Year 3 Backbone professional services (50%), Year 3 Backbone O&M (50%), Year 3 P&I professional services (50%), Year 3 P&I O&M (50%).",
+      "recognitionTrigger": "Formal customer acceptance of the delivery package per the delivery and acceptance provisions of the Technical Proposal and SLA (Appendix C).",
+      "status": "Pending",
+      "sourcePercentOfPobValue": 6.5
+    },
+    {
+      "milestoneId": "M6",
+      "milestoneName": "Package 6 Delivery - Final",
+      "scheduledDueDate": "2026-05-31",
+      "acceptanceDate": "2026-05-31",
+      "linkedContractLines": [
+        1,
+        2
+      ],
+      "linkedPerformanceObligations": [
+        "POB-1",
+        "POB-2"
+      ],
+      "amountExcludingTaxAsAnalysed": 7575997.0,
+      "amountExcludingTaxReconciled": 7574575.0,
+      "amountByPerformanceObligation": {
+        "POB-1": 4453103.62,
+        "POB-2": 3121471.38
+      },
+      "percentOfTransactionPrice": 6.53,
+      "percentOfPob1": 7.44,
+      "percentOfPob2": 5.55,
+      "acceptanceCriteria": "Delivery of Year 3 Backbone professional services (remaining 50%), Year 3 Backbone O&M (remaining 50%), Year 3 P&I professional services (remaining 50%), Year 3 P&I O&M (remaining 50%). Final Acceptance Certificate issuance.",
+      "recognitionTrigger": "Formal Final Acceptance Certificate issued by G42 Sky1 / Presight; Performance Bond released 3 months after Final Acceptance.",
+      "status": "Pending",
+      "sourcePercentOfPobValue": 6.5
+    }
+  ],
+  "controlTotals": {
+    "sumAsAnalysed": 116052422.0,
+    "sumReconciled": 116051000.0,
+    "transactionPrice": 116051000.0,
+    "varianceAbsorbedInM6": 1422.0
+  },
+  "_dataQualityFindings": [
+    {
+      "severity": "Medium",
+      "finding": "The workbook's 'Invoicing Schedule' totals AED 116,052,422 ex-VAT against a stated TCV of AED 116,051,000 - a variance of AED 1,422 arising from AED/USD conversion rounding.",
+      "resolutionApplied": "amountExcludingTaxReconciled reduces M6/INV-007 by AED 1,422 so the schedule ties exactly to the contractual TCV. amountExcludingTaxAsAnalysed retains the original figure.",
+      "actionRequired": "Confirm the precise AED package breakdown with Daypop and agree which package absorbs the rounding before INV-005 to INV-007 are raised."
+    },
+    {
+      "severity": "Medium",
+      "finding": "The workbook's 'Delivery Milestones' sheet '% of POB value' column sums to 112.3%, and M0 is stated as 24.7% where the invoice value implies 12.3% of TCV (or 25.4% of POB-2).",
+      "resolutionApplied": "Milestone weights in this payload are derived from invoice values, which reconcile to 100.00% of the transaction price. The original figures are retained as sourcePercentOfPobValue for traceability.",
+      "actionRequired": "Correct the source workbook column so it states a consistent basis."
+    },
+    {
+      "severity": "High",
+      "finding": "The per-milestone split between POB-1 and POB-2 is not stated in the source analysis for M1-M6.",
+      "resolutionApplied": "M0 is allocated 100% to POB-2 (licence delivery). M1-M6 are split pro-rata on residual POB value: POB-1 58.79% / POB-2 41.21%. Rounding differences are absorbed in M6 so each POB ties exactly to its allocated transaction price.",
+      "actionRequired": "Replace with the actual per-package P&I / Backbone split from Commercial Proposal Appendix B before this drives revenue postings. This split determines revenue by POB in every period and must not go live unconfirmed."
+    },
+    {
+      "severity": "Medium",
+      "finding": "INV-007 / M6 is dated May 2026, after the contract expiry of 31 March 2026.",
+      "actionRequired": "Confirm the delivery and billing date with the contract manager, or process a contract extension in D365 so the billing schedule line does not fall outside the contract period and fail validation."
+    }
+  ]
+}

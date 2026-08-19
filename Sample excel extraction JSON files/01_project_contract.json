@@ -1,0 +1,137 @@
+{
+  "_meta": {
+    "sourceDocument": "Engagement Letter No. 01 - R100 Crisis and Emergency Management Platform",
+    "sourceAnalysis": "Project agent 1a - Engagement Letter - Presight and Daypop_IFRS15_Analysis.xlsx",
+    "extractedOn": "2026-08-12",
+    "accountingFramework": "IFRS 15",
+    "payloadVersion": "1.0.0",
+    "purpose": "Project contract header, funding source and funding rule. Must be POSTed before any project."
+  },
+  "ProjectContractHeaders": [
+    {
+      "dataAreaId": "DPTP",
+      "ProjectContractId": "PC-EL01-R100",
+      "Name": "Engagement Letter No. 1 - R100 Crisis and Emergency Management Platform",
+      "ContractReferenceNumber": "Engagement Letter No. 01",
+      "CustomerAccount": "C-G42SKY1-001",
+      "FundingType": "Customer",
+      "CurrencyCode": "AED",
+      "ContractStartDate": "2023-04-01",
+      "ContractEndDate": "2026-03-31",
+      "EffectiveDate": "2023-09-19",
+      "SigningDate": "2023-09-19",
+      "ContractValueExcludingTax": 116051000.0,
+      "ContractValueIncludingTax": 121853550.0,
+      "TaxAmount": 5802550.0,
+      "PaymentTerms": "N060",
+      "SalesTaxGroup": "AE-VAT-STD",
+      "InvoiceLanguage": "en-AE",
+      "Status": "Active"
+    }
+  ],
+  "ProjectContractFundingSources": [
+    {
+      "dataAreaId": "DPTP",
+      "ProjectContractId": "PC-EL01-R100",
+      "FundingSourceId": "FS-G42SKY1",
+      "FundingSourceType": "Customer",
+      "CustomerAccount": "C-G42SKY1-001",
+      "CurrencyCode": "AED",
+      "FundingLimitAmount": 116051000.0,
+      "PaymentTerms": "N060",
+      "SalesTaxGroup": "AE-VAT-STD"
+    }
+  ],
+  "ProjectContractFundingRules": [
+    {
+      "dataAreaId": "DPTP",
+      "ProjectContractId": "PC-EL01-R100",
+      "FundingRuleId": "FR-001",
+      "FundingSourceId": "FS-G42SKY1",
+      "ProjectId": "R100-EL01",
+      "IncludeSubProjects": true,
+      "ContributionPercent": 100.0
+    }
+  ],
+  "contractTermsExtension": {
+    "_note": "Non-transactional legal terms. Hold in an extension table, ProjectContract custom fields, or a linked document record - they drive lifecycle alerts, not postings.",
+    "ProjectContractId": "PC-EL01-R100",
+    "MasterAgreement": {
+      "type": "MSA",
+      "expiryDate": "2028-02-29",
+      "note": "Engagement Letter forms part of the MSA (MSA Clause 2.3). Renewal mechanism not stated in the Engagement Letter; subject to the MSA term."
+    },
+    "Termination": {
+      "noticePeriodMonths": 2,
+      "materialBreachCureDays": 7,
+      "note": "MSA Clause 11. Immediate termination for material breach (7-day cure) or insolvency. On termination the Company pays pro-rated fees for incomplete services; Supplier refunds unearned advances."
+    },
+    "LiquidatedDamages": {
+      "lateDeliveryCapPercentOfDelayedServices": 10.0,
+      "rejectedServicesPenaltyPercentPerWeek": 1.0,
+      "rejectedServicesCapPercent": 10.0,
+      "rejectedServicesCureWeeks": 3,
+      "setOffAgainstLiabilityCap": true,
+      "vatApplicable": false,
+      "ifrs15Treatment": "Negative variable consideration. Constrained to nil at inception under IFRS 15.56. Monitor at every milestone and re-measure the transaction price when an LD notice is highly probable.",
+      "maximumTheoreticalExposure": 11605100.0,
+      "note": "Clause 2(I) and 2(II) of the Engagement Letter. The 10% cap applies per delay, not in aggregate."
+    },
+    "Warranty": {
+      "months": 12,
+      "startEvent": "Written acceptance",
+      "deemedAcceptanceDays": 14,
+      "slaReference": "Appendix C"
+    },
+    "LimitationOfLiability": {
+      "cap": "100% of Fees paid under the Engagement Letter (MSA Clause 9.3)",
+      "exclusions": [
+        "indirect",
+        "consequential",
+        "incidental",
+        "loss of profit"
+      ],
+      "carveOuts": [
+        "death or personal injury",
+        "fraud",
+        "non-excludable liability"
+      ]
+    },
+    "IntellectualProperty": {
+      "ownership": "Vests in the Company (Clause 2(III))",
+      "supplierPreExistingIP": "Perpetual licence-back (MSA Clause 8.2)",
+      "note": "Perpetual right-to-use licences for FMP System Core and Smart Connection Core are in scope."
+    },
+    "Confidentiality": {
+      "basis": "Mutual, MSA Clause 10",
+      "survivalYears": 1,
+      "tradeSecrets": "Indefinite"
+    },
+    "GoverningLaw": {
+      "law": "England and Wales",
+      "jurisdiction": "Abu Dhabi Global Markets Courts (MSA Clause 15)"
+    },
+    "Signatories": [
+      {
+        "party": "G42 Sky1 Technology Projects LLC",
+        "name": "Peng Xiao"
+      },
+      {
+        "party": "Daypop Technology Projects LLC",
+        "name": "Yinglun Ni (Ian Ni)"
+      }
+    ],
+    "SignificantFinancingComponent": {
+      "present": false,
+      "basis": "Advance at signoff is linked to initial licence delivery and mobilisation; the gap between advance and related performance does not exceed 12 months for the bulk of the consideration and the primary purpose is payment security (Performance Bond), not financing. Practical expedient under IFRS 15.63 may apply."
+    },
+    "ForeignExchange": {
+      "contractCurrency": "AED",
+      "pricingCurrency": "USD",
+      "usdContractValue": 31600000.0,
+      "impliedRate": 3.6731,
+      "adjustmentMechanism": null,
+      "note": "No FX clause. AED amount is fixed; all invoices must be issued in UAE dirhams."
+    }
+  }
+}

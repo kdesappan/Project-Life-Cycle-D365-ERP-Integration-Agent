@@ -1,0 +1,172 @@
+{
+  "_meta": {
+    "sourceDocument": "Engagement Letter No. 01 - R100 Crisis and Emergency Management Platform",
+    "sourceAnalysis": "Project agent 1a - Engagement Letter - Presight and Daypop_IFRS15_Analysis.xlsx",
+    "extractedOn": "2026-08-12",
+    "accountingFramework": "IFRS 15",
+    "payloadVersion": "1.0.0",
+    "purpose": "Project master hierarchy. One parent project for the engagement, one sub-project per IFRS 15 performance obligation so that revenue, WIP and estimates are measurable per POB."
+  },
+  "hierarchy": {
+    "R100-EL01": [
+      "R100-EL01-01",
+      "R100-EL01-02"
+    ]
+  },
+  "ProjectsV2": [
+    {
+      "dataAreaId": "DPTP",
+      "ProjectID": "R100-EL01",
+      "ProjectName": "R100 Crisis and Emergency Management Platform - EL01",
+      "ProjectContractId": "PC-EL01-R100",
+      "ProjectGroupId": "FP-IFRS15",
+      "ProjectType": "FixedPrice",
+      "ProjectStage": "InProcess",
+      "CustomerAccount": "C-G42SKY1-001",
+      "CurrencyCode": "AED",
+      "ProjectStartDate": "2023-04-01",
+      "ProjectSchedulingEndDate": "2026-03-31",
+      "ParentProjectId": null,
+      "WorkerResponsibleId": null,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "PaymentTerms": "N060",
+      "LineProperty": "Chargeable",
+      "ProjectDescription": "Design, development, deployment and 3-year operation and maintenance of the R100 Crisis and Emergency Management Platform for the UAE. Parent roll-up project; no direct transactions posted at this level.",
+      "ContractValueExcludingTax": 116051000.0,
+      "AllocationPercentOfTransactionPrice": 100.0
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProjectID": "R100-EL01-01",
+      "ProjectName": "POB-1 Presentation & Internal-integration Solution",
+      "ProjectContractId": "PC-EL01-R100",
+      "ProjectGroupId": "FP-IFRS15",
+      "ProjectType": "FixedPrice",
+      "ProjectStage": "InProcess",
+      "CustomerAccount": "C-G42SKY1-001",
+      "CurrencyCode": "AED",
+      "ProjectStartDate": "2023-04-01",
+      "ProjectSchedulingEndDate": "2026-03-31",
+      "ParentProjectId": "R100-EL01",
+      "WorkerResponsibleId": null,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "PaymentTerms": "N060",
+      "LineProperty": "Chargeable",
+      "ProjectDescription": "Presentation & Internal-integration Solution - development, implementation and 3-year O&M of: One-screen Overview, Joint Command Console, R100 One, Hawk Eye/SDK/APIs, Network Management Monitoring Platform, R100 Insights, MCU Gateway.",
+      "ContractValueExcludingTax": 59832268.0,
+      "AllocationPercentOfTransactionPrice": 51.57
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProjectID": "R100-EL01-02",
+      "ProjectName": "POB-2 Backbone Services & Terminals",
+      "ProjectContractId": "PC-EL01-R100",
+      "ProjectGroupId": "FP-IFRS15",
+      "ProjectType": "FixedPrice",
+      "ProjectStage": "InProcess",
+      "CustomerAccount": "C-G42SKY1-001",
+      "CurrencyCode": "AED",
+      "ProjectStartDate": "2023-04-01",
+      "ProjectSchedulingEndDate": "2026-03-31",
+      "ParentProjectId": "R100-EL01",
+      "WorkerResponsibleId": null,
+      "SalesTaxGroup": "AE-VAT-STD",
+      "PaymentTerms": "N060",
+      "LineProperty": "Chargeable",
+      "ProjectDescription": "Backbone Services & Terminals - FMP System Core Perpetual Licence, Smart Connection Core & Dispatching Console Perpetual Licence, Professional Services (consulting, integration, training), Terminals (15 professional smart handsets, 15 body cameras, 15 mobile dome cameras, 15 smart watches, 100 terminal licences), 3-year O&M of Backbone Services.",
+      "ContractValueExcludingTax": 56218732.0,
+      "AllocationPercentOfTransactionPrice": 48.43
+    }
+  ],
+  "ProjectWorkBreakdownStructureTasks": [
+    {
+      "dataAreaId": "DPTP",
+      "ProjectID": "R100-EL01",
+      "WBSId": "R100-EL01",
+      "TaskId": "M0",
+      "TaskName": "Contract Signoff - Perpetual Licence Delivery (60%)",
+      "IsMilestone": true,
+      "TaskScheduledStartDate": "2023-06-30",
+      "TaskScheduledEndDate": "2023-06-30",
+      "TaskPercentComplete": 100.0,
+      "_linkedPerformanceObligation": "POB-2 only"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProjectID": "R100-EL01",
+      "WBSId": "R100-EL01",
+      "TaskId": "M1",
+      "TaskName": "Package 1 Delivery",
+      "IsMilestone": true,
+      "TaskScheduledStartDate": "2023-11-30",
+      "TaskScheduledEndDate": "2023-11-30",
+      "TaskPercentComplete": 100.0,
+      "_linkedPerformanceObligation": "POB-1 and POB-2"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProjectID": "R100-EL01",
+      "WBSId": "R100-EL01",
+      "TaskId": "M2",
+      "TaskName": "Package 2 Delivery",
+      "IsMilestone": true,
+      "TaskScheduledStartDate": "2024-05-31",
+      "TaskScheduledEndDate": "2024-05-31",
+      "TaskPercentComplete": 100.0,
+      "_linkedPerformanceObligation": "POB-1 and POB-2"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProjectID": "R100-EL01",
+      "WBSId": "R100-EL01",
+      "TaskId": "M3",
+      "TaskName": "Package 3 Delivery",
+      "IsMilestone": true,
+      "TaskScheduledStartDate": "2024-11-30",
+      "TaskScheduledEndDate": "2024-11-30",
+      "TaskPercentComplete": 100.0,
+      "_linkedPerformanceObligation": "POB-1 and POB-2"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProjectID": "R100-EL01",
+      "WBSId": "R100-EL01",
+      "TaskId": "M4",
+      "TaskName": "Package 4 Delivery",
+      "IsMilestone": true,
+      "TaskScheduledStartDate": "2025-05-31",
+      "TaskScheduledEndDate": "2025-05-31",
+      "TaskPercentComplete": 0.0,
+      "_linkedPerformanceObligation": "POB-1 and POB-2"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProjectID": "R100-EL01",
+      "WBSId": "R100-EL01",
+      "TaskId": "M5",
+      "TaskName": "Package 5 Delivery",
+      "IsMilestone": true,
+      "TaskScheduledStartDate": "2025-11-30",
+      "TaskScheduledEndDate": "2025-11-30",
+      "TaskPercentComplete": 0.0,
+      "_linkedPerformanceObligation": "POB-1 and POB-2"
+    },
+    {
+      "dataAreaId": "DPTP",
+      "ProjectID": "R100-EL01",
+      "WBSId": "R100-EL01",
+      "TaskId": "M6",
+      "TaskName": "Package 6 Delivery - Final",
+      "IsMilestone": true,
+      "TaskScheduledStartDate": "2026-05-31",
+      "TaskScheduledEndDate": "2026-05-31",
+      "TaskPercentComplete": 0.0,
+      "_linkedPerformanceObligation": "POB-1 and POB-2"
+    }
+  ],
+  "_openItems": [
+    "WorkerResponsibleId is blank - populate with the Daypop project manager HcmWorker RecId before POST.",
+    "Services commenced 1 April 2023 but the Engagement Letter was signed 19 September 2023. Confirm the ProjectStartDate to use for the accounting entity and whether an opening catch-up entry is required (see 06_revenue_recognition.json).",
+    "Project number sequence: these IDs are proposed. If the D365 number sequence is automatic, omit ProjectID from the POST body and capture the generated value for downstream calls."
+  ]
+}

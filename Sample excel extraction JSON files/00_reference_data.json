@@ -1,0 +1,80 @@
+{
+  "_meta": {
+    "sourceDocument": "Engagement Letter No. 01 - R100 Crisis and Emergency Management Platform",
+    "sourceAnalysis": "Project agent 1a - Engagement Letter - Presight and Daypop_IFRS15_Analysis.xlsx",
+    "extractedOn": "2026-08-12",
+    "accountingFramework": "IFRS 15",
+    "payloadVersion": "1.0.0",
+    "purpose": "Prerequisite master data that must exist in D365 F&O before the project contract is posted. Validate with GET before POSTing; create only what is missing."
+  },
+  "legalEntity": {
+    "entity": "LegalEntities",
+    "DataAreaId": "DPTP",
+    "Name": "Daypop Technology Projects LLC",
+    "_verify": "Confirm the actual DataAreaId for the Daypop legal entity."
+  },
+  "customer": {
+    "entity": "CustomersV3",
+    "dataAreaId": "DPTP",
+    "CustomerAccount": "C-G42SKY1-001",
+    "OrganizationName": "G42 Sky1 Technology Projects LLC",
+    "KnownAs": "Presight",
+    "CustomerGroupId": "INTERCO",
+    "AddressStreet": "East 59_1, National Exhibition Center",
+    "AddressCity": "Abu Dhabi",
+    "AddressCountryRegionId": "ARE",
+    "SalesCurrencyCode": "AED",
+    "PaymentTerms": "N060",
+    "SalesTaxGroup": "AE-VAT-STD",
+    "LineOfBusinessId": "GOVT",
+    "InvoiceAddressEmail": "Payments@G42.ai",
+    "_note": "G42 Sky1 sits inside the G42 Holding group. Confirm whether this is an intercompany customer group and whether elimination flags are required."
+  },
+  "paymentTerms": {
+    "entity": "PaymentTerms",
+    "dataAreaId": "DPTP",
+    "Name": "N060",
+    "Description": "Net 60 days from invoice receipt",
+    "PaymentMethod": "Net",
+    "NumberOfDays": 60,
+    "CashDiscountCode": null,
+    "_note": "Engagement Letter: payment within 60 days from invoice receipt. Late-payment interest not specified; UAE statutory default may apply."
+  },
+  "salesTax": {
+    "entity": "TaxGroups",
+    "dataAreaId": "DPTP",
+    "TaxGroup": "AE-VAT-STD",
+    "Description": "UAE VAT standard rate 5%",
+    "TaxRatePercent": 5.0,
+    "_note": "VAT is excluded from the IFRS 15 transaction price (IFRS 15.47 - collected on behalf of the tax authority). Liquidated damages are non-VAT items and require a separate non-VAT credit document."
+  },
+  "projectGroup": {
+    "entity": "ProjectGroups",
+    "dataAreaId": "DPTP",
+    "ProjectGroupId": "FP-IFRS15",
+    "ProjectType": "FixedPrice",
+    "RevenueRecognitionAccountingMethod": "CompletedPercentage",
+    "MatchingPrincipleForRevenue": "SalesValue",
+    "PostCostsToAccounts": "Balance",
+    "_note": "Fixed-price project group configured for percentage-of-completion revenue recognition. The IFRS 15 measure of progress is an OUTPUT method (milestone completion), so the completion percentage must be driven by accepted milestone value, not cost-to-cost. See 06_revenue_recognition.json."
+  },
+  "wipAndRevenueLedgerAccounts": {
+    "_verify": "Map to the actual chart of accounts before go-live.",
+    "accruedRevenueSalesValue": "1450 - Contract asset / accrued revenue",
+    "invoicedOnAccount": "2450 - Deferred revenue / contract liability",
+    "revenue": "4100 - Project revenue - platform delivery",
+    "vatPayable": "2310 - VAT output payable",
+    "accountsReceivable": "1200 - Trade receivables"
+  },
+  "performanceBondTracking": {
+    "entity": "BankGuarantees_or_ProjectContractExtension",
+    "GuaranteeType": "PerformanceBond",
+    "PercentOfFees": 5.0,
+    "Amount": 5802550.0,
+    "Currency": "AED",
+    "SubmissionDeadline": "2023-10-09",
+    "DeadlineBasis": "Within 20 days of Engagement Letter signature (19 Sep 2023)",
+    "ReleaseCondition": "3 months after Final Acceptance Certificate",
+    "_note": "Off-balance-sheet contingent exposure for Daypop. No formal retention applies; the bond is the performance security."
+  }
+}
