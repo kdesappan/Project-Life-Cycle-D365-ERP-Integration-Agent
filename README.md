@@ -14,6 +14,7 @@ End-to-end outcomes:
 4. Post approved records to D365 OData entities in process order.
 5. Handle tenant differences with smart fallback and defer behavior.
 6. Provide step-level diagnostics for faster issue resolution.
+7. Support project closure readiness review and ERP status update planning after lifecycle completion.
 
 ## Core Process Steps
 
@@ -50,6 +51,12 @@ The integration flow runs in seven business steps:
 - Revenue recognition schedule extracted for review
 - D365 Revenue Recognition automation batch handles revenue recognition based on the schedule
 - No separate posting agent is required for this step
+
+Post-completion: Project Closure & ERP Status Update
+- Confirm project setup, on-account forecasts, invoice schedule, and D365 revenue recognition batch handoff are complete
+- Review open D365 follow-up items and deferred/manual activities
+- Prepare ERP project status update from active/in-process to closed where tenant governance permits
+- Keep closure/status update separate from invoice posting; no customer invoice is posted by this app
 
 ## Architecture
 
@@ -234,6 +241,64 @@ The smoke test uploads a sample workbook, extracts all steps, approves them in o
 ## Current Operational Note
 
 Depending on tenant configuration, some Project entities may be writable while others are permission-restricted. The agent surfaces these conditions with explicit diagnostics so security/admin updates can be applied quickly.
+
+## Project Closure & ERP Status Update
+
+Project closure is treated as a post-completion control activity after the seven-step lifecycle flow has completed. The current app prepares the data trail and diagnostics needed for closure review; it does not post customer invoices or force-close projects without the required D365 governance.
+
+Recommended closure checklist:
+
+1. Confirm Step 1 through Step 7 are completed or explicitly deferred with accepted business reasons.
+2. Confirm parent project and sub-projects exist in D365 and use the correct project contract.
+3. Confirm milestone on-account forecasts were created under the correct sub-projects.
+4. Confirm Invoice Schedule data was extracted and reviewed; draft invoice proposal creation remains a future/custom D365 service activity where required.
+5. Confirm D365 Revenue Recognition automation batch owns the revenue recognition schedule and no separate posting agent is required.
+6. Review the final D365 call log for any manual follow-up activity, including the standard copy/manual invoice proposal notes.
+7. Validate there are no open project setup exceptions, missing funding rules, missing customer data, or blocked permissions.
+8. When business closure is approved, update the ERP project lifecycle/status according to tenant policy.
+
+Suggested ERP status update targets:
+
+- Parent project: move from active/in-process to a closure-ready or closed status when all sub-projects are complete.
+- Sub-projects: close each POB-level sub-project after milestones, invoice schedule review, and revenue recognition handoff are complete.
+- Project contract: retain active or update to completed/closed only when contract governance, billing, revenue recognition, and audit requirements are satisfied.
+
+Future automation option:
+
+- Add a custom D365 service/action such as `updateProjectClosureStatus`.
+- The action should validate open transactions, forecasts, invoice proposal state, and revenue recognition/batch status before changing the project stage/status.
+- The action should return a clear success/failure response and should not bypass D365 workflow, audit, or financial controls.
+
+Suggested request shape:
+
+```json
+{
+  "dataAreaId": "2020",
+  "projectContractId": "PC-000037",
+  "parentProjectId": "PROJ-000036",
+  "subProjectIds": [
+    "PROJ-000036-01",
+    "PROJ-000036-02"
+  ],
+  "targetProjectStatus": "Closed",
+  "closureDate": "2026-05-31",
+  "closureReason": "Contract lifecycle completed and revenue recognition handed off to D365 automation batch"
+}
+```
+
+Suggested response shape:
+
+```json
+{
+  "success": true,
+  "message": "Project closure status updated successfully.",
+  "updatedProjects": [
+    "PROJ-000036",
+    "PROJ-000036-01",
+    "PROJ-000036-02"
+  ]
+}
+```
 
 ## Future Enhancement: Draft Project Invoice Proposal Creation
 
