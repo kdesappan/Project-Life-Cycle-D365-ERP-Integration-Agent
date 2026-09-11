@@ -224,6 +224,58 @@ python -c "import smoke_test_full_api as s; s.BASE_URL='http://127.0.0.1:8001'; 
 
 The smoke test uploads a sample workbook, extracts all steps, approves them in order, and prints a final status summary.
 
+## Public Deployment
+
+The app uses a FastAPI backend and Streamlit frontend, so public hosting requires two services.
+
+### 1. Deploy the backend
+
+The repository includes `render.yaml` for a Render web service. In Render, connect the GitHub repository and create the service from the blueprint. Render uses:
+
+```bash
+pip install -r requirements.txt
+uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+```
+
+Add these values in the Render service environment settings. Do not commit them to GitHub:
+
+```text
+D365_ENVIRONMENT
+D365_BASE_URL
+D365_TENANT_ID
+D365_CLIENT_ID
+D365_CLIENT_SECRET
+D365_DATA_AREA_ID
+```
+
+Verify the backend before deploying the frontend:
+
+```text
+https://<backend-service>.onrender.com/health
+```
+
+### 2. Deploy the Streamlit frontend
+
+In Streamlit Community Cloud, select the GitHub repository and set the main file to:
+
+```text
+frontend/app.py
+```
+
+Add this Streamlit secret:
+
+```toml
+D365_AGENT_BACKEND_URL = "https://<backend-service>.onrender.com"
+```
+
+The Streamlit deployment then provides a public URL similar to:
+
+```text
+https://<app-name>.streamlit.app
+```
+
+D365 credentials belong only in the backend hosting provider's secret settings. They must not be placed in Streamlit secrets or committed to the repository.
+
 ## Key Files
 
 - backend/main.py: API endpoints and session flow
