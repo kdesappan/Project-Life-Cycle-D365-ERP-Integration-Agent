@@ -420,8 +420,9 @@ with st.sidebar:
 
 if not _backend_alive():
     st.error(
-        "⚠️ **Backend offline.** Start the FastAPI server:\n\n"
-        "```bash\nuvicorn backend.main:app --reload --port 8000\n```",
+        "⚠️ **Backend offline.** This frontend cannot reach the FastAPI backend. "
+        "For Streamlit Community Cloud, add the public backend URL as the `D365_AGENT_BACKEND_URL` secret. "
+        "For local use, start FastAPI with `uvicorn backend.main:app --reload --port 8000`.",
         icon="🚨",
     )
     st.stop()
